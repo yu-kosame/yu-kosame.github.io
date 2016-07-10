@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>yu-kosame</title>
+      <title> on yu-kosame </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
     <link>https://yu-kosame.github.io/</link>
-    <description>Recent content on yu-kosame</description>
-    <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 10 Jul 2016 22:14:17 +0900</lastBuildDate>
-    <atom:link href="https://yu-kosame.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <author>ruta</author>
+    
+    <updated>Sun, 10 Jul 2016 22:14:17 JST</updated>
     
     <item>
       <title>hello world</title>
       <link>https://yu-kosame.github.io/post/hello-world/</link>
-      <pubDate>Sun, 10 Jul 2016 22:14:17 +0900</pubDate>
-      
+      <pubDate>Sun, 10 Jul 2016 22:14:17 JST</pubDate>
+      <author>ruta</author>
       <guid>https://yu-kosame.github.io/post/hello-world/</guid>
       <description>&lt;p&gt;hugo で webサイト再構築。またね、clotal。&lt;/p&gt;
 </description>
