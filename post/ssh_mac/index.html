@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>hello world - ゆこさめ．</title>
+	<title>mac からの ssh で接続が切れないようにする - ゆこさめ．</title>
 	<meta name="author" content="map[name:ruta email:]">
 
 	
@@ -17,7 +17,7 @@
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     
-	<link rel="canonical" href="https://yu-kosame.github.io/post/hello-world/">
+	<link rel="canonical" href="https://yu-kosame.github.io/post/ssh_mac/">
 	<link href="https://yu-kosame.github.io//favicon.png" rel="shortcut icon">
 	<link href="https://yu-kosame.github.io//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="https://yu-kosame.github.io//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -74,8 +74,13 @@
 				<div id="content" class="inner">
 					<div itemscope itemtype="http://schema.org/Blog">
 					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <h1 class="title" itemprop="name">hello world</h1>
-	<div class="entry-content" itemprop="articleBody"><p>hugo で webサイト再構築。またね、clotal。</p>
+    <h1 class="title" itemprop="name">mac からの ssh で接続が切れないようにする</h1>
+	<div class="entry-content" itemprop="articleBody"><pre><code class="language-bash"># ~/.ssh/config
+ServerAliveInterval 60  # 60秒に一回何かを送る
+</code></pre>
+
+<p>参考：
+<a href="http://superbrothers.hatenablog.com/entry/20090825/1251211696">ssh接続が勝手に切れちゃう場合の対処法 - すぱぶろ</a></p>
 </div></article>
 					
 						<div class="share">

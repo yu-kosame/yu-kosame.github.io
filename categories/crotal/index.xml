@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Crotal on ゆこさめ． </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>https://yu-kosame.github.io/categories/crotal/</link>
+    <language>ja-jp</language>
+    <author>ruta</author>
+    
+    <updated>Sun, 07 Sep 2014 22:59:00 JST</updated>
+    
+    <item>
+      <title>blog start</title>
+      <link>https://yu-kosame.github.io/post/2014-09-07-blog-start/</link>
+      <pubDate>Sun, 07 Sep 2014 22:59:00 JST</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/2014-09-07-blog-start/</guid>
+      <description>
+
+&lt;h2 id=&#34;crotal-を始めた&#34;&gt;Crotal を始めた&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pip install crotal
+cd /home/user/                                   # ソースを置くディレクトリに移動
+crotal init sitename                             # 新しいサイトの作成
+cd sitename/
+crotal generate sitename 
+crotal server                                    # localhost:8000でプレビュー
+crotal new_post &#39;blog start&#39;                     # 新しい投稿
+vim source/posts/2014-09-07-blog-start.markdown  # 投稿の編集
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;crotal-のデプロイ&#34;&gt;Crotal のデプロイ&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;crotal generate -f
+rsync -r _sites/ /var/www/crotal  # 公開用サーバで編集してるので crotal deploy は使わない
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# httpd.conf l.292
+DocumentRoot &amp;quot;/var/www/crotal&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;apachectl restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;crotal-の設定-調整&#34;&gt;Crotal の設定・調整&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim _config.yml  # いろいろ
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;iPhoneで見ると幅が少し広いらしく，ふよふよするので変更する&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# themes/default/static/css/style.css
+.container { width: 320px; }  # l.295 350px -&amp;gt; 320px
+
+.left-area { width: 320px; }  # l.300 350px -&amp;gt; 320px
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;段落 p の下の行間がやや広いので変更する&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# themes/default/static/css/style.css
+.entry p {font-size: 18px; margin-top: 0.25em; line-height: 1.25; }  # l.146
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;見出しの下の行間がやや広いので変更する&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# themes/default/static/css/style.css
+h1, h2, h3, h4, h5, h6 { margin-bottom: 0.25em; color: \#111; line-height: 1em; font-weight: normal; }  # 1em -&amp;gt; 0.25em
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

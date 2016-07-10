@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Mac on ゆこさめ． </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>https://yu-kosame.github.io/categories/mac/</link>
+    <language>ja-jp</language>
+    <author>ruta</author>
+    
+    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
+    
+    <item>
+      <title>mac からの ssh で接続が切れないようにする</title>
+      <link>https://yu-kosame.github.io/post/ssh_mac/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/ssh_mac/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# ~/.ssh/config
+ServerAliveInterval 60  # 60秒に一回何かを送る
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;参考：
+&lt;a href=&#34;http://superbrothers.hatenablog.com/entry/20090825/1251211696&#34;&gt;ssh接続が勝手に切れちゃう場合の対処法 - すぱぶろ&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

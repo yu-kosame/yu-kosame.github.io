@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>hello world - ゆこさめ．</title>
+	<title>サブドメインをつくる - ゆこさめ．</title>
 	<meta name="author" content="map[name:ruta email:]">
 
 	
@@ -17,7 +17,7 @@
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     
-	<link rel="canonical" href="https://yu-kosame.github.io/post/hello-world/">
+	<link rel="canonical" href="https://yu-kosame.github.io/post/sub_domain/">
 	<link href="https://yu-kosame.github.io//favicon.png" rel="shortcut icon">
 	<link href="https://yu-kosame.github.io//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="https://yu-kosame.github.io//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -74,8 +74,45 @@
 				<div id="content" class="inner">
 					<div itemscope itemtype="http://schema.org/Blog">
 					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <h1 class="title" itemprop="name">hello world</h1>
-	<div class="entry-content" itemprop="articleBody"><p>hugo で webサイト再構築。またね、clotal。</p>
+    <h1 class="title" itemprop="name">サブドメインをつくる</h1>
+	<div class="entry-content" itemprop="articleBody">
+
+<h2 id="dns-にサブドメインを登録">DNS にサブドメインを登録</h2>
+
+<p>お名前.com の場合です。</p>
+
+<ol>
+<li>お名前.com ドメインNavi</li>
+<li>ネームサーバーの設定 -&gt; DNS関連機能の設定</li>
+<li>DNSレコード設定を利用する</li>
+<li>「ホスト名 : sub, TYPE : A, TTL : 3600, VALUE : xxx.xxx.xxx.xxx, 状態 : 有効」で追加</li>
+</ol>
+
+<h2 id="apache-の設定">apache の設定</h2>
+
+<pre><code class="language-bash"># /etc/httpd/conf.d/virtualhost.conf
+NameVirtualHost *:80
+
+&lt;virtualHost *:80&gt;
+    ServerName ***.jp
+    DocumentRoot /var/www/html
+&lt;/virtualHost&gt;
+
+&lt;virtualHost *:80&gt;
+    ServerName sub.***.jp
+    DocumentRoot /var/www/sub
+&lt;/virtualHost&gt;
+</code></pre>
+
+<pre><code>apachectl restart
+</code></pre>
+
+<p>参考：</p>
+
+<ul>
+<li><a href="http://mamansoft.net/blog/さくらVPSでサブドメインを追加してみた/">さくらVPSでサブドメインを追加してみた | MAMANのITブログ</a></li>
+<li><a href="http://kajuhome.com/tips/tips_03_004.shtml">iTIPS集:Webサーバ(Apache)　『バーチャルホストの公開方法』 - はじめての自宅サーバ構築[kajuhome.com]</a></li>
+</ul>
 </div></article>
 					
 						<div class="share">

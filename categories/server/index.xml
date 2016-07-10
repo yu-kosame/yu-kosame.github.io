@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Server on ゆこさめ． </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>https://yu-kosame.github.io/categories/server/</link>
+    <language>ja-jp</language>
+    <author>ruta</author>
+    
+    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
+    
+    <item>
+      <title>サブドメインをつくる</title>
+      <link>https://yu-kosame.github.io/post/sub_domain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/sub_domain/</guid>
+      <description>
+
+&lt;h2 id=&#34;dns-にサブドメインを登録&#34;&gt;DNS にサブドメインを登録&lt;/h2&gt;
+
+&lt;p&gt;お名前.com の場合です。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;お名前.com ドメインNavi&lt;/li&gt;
+&lt;li&gt;ネームサーバーの設定 -&amp;gt; DNS関連機能の設定&lt;/li&gt;
+&lt;li&gt;DNSレコード設定を利用する&lt;/li&gt;
+&lt;li&gt;「ホスト名 : sub, TYPE : A, TTL : 3600, VALUE : xxx.xxx.xxx.xxx, 状態 : 有効」で追加&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;apache-の設定&#34;&gt;apache の設定&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# /etc/httpd/conf.d/virtualhost.conf
+NameVirtualHost *:80
+
+&amp;lt;virtualHost *:80&amp;gt;
+    ServerName ***.jp
+    DocumentRoot /var/www/html
+&amp;lt;/virtualHost&amp;gt;
+
+&amp;lt;virtualHost *:80&amp;gt;
+    ServerName sub.***.jp
+    DocumentRoot /var/www/sub
+&amp;lt;/virtualHost&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;apachectl restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://mamansoft.net/blog/さくらVPSでサブドメインを追加してみた/&#34;&gt;さくらVPSでサブドメインを追加してみた | MAMANのITブログ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://kajuhome.com/tips/tips_03_004.shtml&#34;&gt;iTIPS集:Webサーバ(Apache)　『バーチャルホストの公開方法』 - はじめての自宅サーバ構築[kajuhome.com]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

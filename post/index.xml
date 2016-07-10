@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Posts on yu-kosame </title>
+      <title>Posts on ゆこさめ． </title>
       <generator uri="https://gohugo.io">Hugo</generator>
     <link>https://yu-kosame.github.io/post/</link>
     <language>ja-jp</language>
@@ -16,6 +16,926 @@
       <author>ruta</author>
       <guid>https://yu-kosame.github.io/post/hello-world/</guid>
       <description>&lt;p&gt;hugo で webサイト再構築。またね、clotal。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OpenShift にさわってみた</title>
+      <link>https://yu-kosame.github.io/post/openshift/</link>
+      <pubDate>Wed, 01 Oct 2014 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/openshift/</guid>
+      <description>
+
+&lt;h2 id=&#34;アカウント登録&#34;&gt;アカウント登録&lt;/h2&gt;
+
+&lt;p&gt;OpenShift online に登録しました。&lt;br /&gt;
+その過程で，メールの URL から認証するところでなぜかエラーになりましたが，次の日アクセスするとうまくできました。&lt;/p&gt;
+
+&lt;h2 id=&#34;アプリ登録&#34;&gt;アプリ登録&lt;/h2&gt;
+
+&lt;p&gt;Django を選択し，その後いろいろ設定します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Public URL  : [appname]-[domainname].rhcloud.com  
+Source Code : git:/github.com/openshift/django-example.git  
+Cartridges  : Python 2.7  
+Scaling     : No scaling  
+Region      : No preference  
+[Create Application]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;ページの確認&#34;&gt;ページの確認&lt;/h2&gt;
+
+&lt;p&gt;admin へのリンクに進むと，もうデプロイできてる…！&lt;/p&gt;
+
+&lt;h2 id=&#34;公開鍵の登録&#34;&gt;公開鍵の登録&lt;/h2&gt;
+
+&lt;p&gt;mac の場合，&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen
+vim /Users/username/.ssh/id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;OpenShift の&amp;rdquo;Set an SSH key&amp;rdquo; にコピペする。&lt;/p&gt;
+
+&lt;p&gt;参考：
+&lt;a href=&#34;http://d.hatena.ne.jp/uco_twinkle/20080409/1207703829&#34;&gt;Mac OS X でSSH公開鍵を作成する - マークアッパーなアタシのための雑記&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;クライアントツールをインストールする&#34;&gt;クライアントツールをインストールする&lt;/h2&gt;
+
+&lt;p&gt;mac の場合（自分memo）&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Ruby はインストール済み&lt;/li&gt;
+&lt;li&gt;git もインストール済み&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sudo gem install rhc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rhc setup&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;Login to openshift.redhat.com: ***@***com # アカウント名
+Password: ***
+
+Generate a token now? (yes|no) yes
+
+Your public SSH key must be uploaded to the OpenShift server to access code.  Upload now? (yes|no) yes # さっきコピペしたんだけどな…
+
+Your client tools are now configured.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;参考：
+&lt;a href=&#34;https://developers.openshift.com/en/getting-started-client-tools.html&#34;&gt;Installing Client Tools | OpenShift Developers&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;アプリの編集&#34;&gt;アプリの編集&lt;/h2&gt;
+
+&lt;p&gt;web インターフェイスの Eclipse plugin もあるけど，コマンドラインのほうがおすすめらしい。&lt;br /&gt;
+公式ドキュメントにはコマンドラインでのアプリ作成方法が載ってますが，web 画面で作ったのでとばす。&lt;/p&gt;
+
+&lt;h3 id=&#34;ローカルにコピー&#34;&gt;ローカルにコピー&lt;/h3&gt;
+
+&lt;p&gt;コマンドラインからつくると，Git Repository が自動的にローカルに保存してくれるらしいですが，web の人は，アプリのページの &amp;ldquo;Source Code&amp;rdquo; の URL をコピーして，&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone ssh:/.../ /Users/***/appname
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;などとします。&lt;/p&gt;
+
+&lt;p&gt;こうやって，ローカルで編集するということですね。&lt;/p&gt;
+
+&lt;h3 id=&#34;git-を使い始める&#34;&gt;git を使い始める&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /Users/***/appname
+git init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;変更後-再投稿する&#34;&gt;（変更後）再投稿する&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
+git commit -m &amp;quot;some title&amp;quot;
+git push
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ローカルに落としたフォルダ内の README.md をみると，&lt;code&gt;git push&lt;/code&gt; の後，django admin のユーザ名とパスワードが流れるから気をつけろと書いてある。&lt;br /&gt;
+なので，よーく探したけど，見つからなかった…。&lt;/p&gt;
+
+&lt;p&gt;調べてみるとエラーらしく，&lt;a href=&#34;https://forums.openshift.com/how-to-login-on-the-admin-painel&#34;&gt;How to login on the admin painel? | OpenShift Forums&lt;/a&gt; に
+    Django has a standard command to solve this problem:&lt;br /&gt;
+        1. Login using ssh
+        2. Goto the repo/wsgi/openshift directory
+        3. type: ./manage.py createsuperuser (and follow instructions)
+とあったので，&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh 128d6...@appname-domainname.rhcroud.com
+cd app-root/repo/wsgi/openshift
+.manage.py createsuperuser
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;と，しました。&lt;/p&gt;
+
+&lt;p&gt;これで，admin ページに入れました。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://workpiles.com/2014/06/openshift-django-web/&#34;&gt;OpenshiftでDjango | Workpiles&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>涼しい日の三頭山</title>
+      <link>https://yu-kosame.github.io/post/mitosan/</link>
+      <pubDate>Sat, 13 Sep 2014 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/mitosan/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://copy.com/f7vNdymg0qeSIsIZ&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;三頭山に行きました。&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/NEVKdG0mc6kmSbSm&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/gSQAjdzYHLd3qF7i&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;シラネセンキュウ &lt;em&gt;Angelica polymorpha&lt;/em&gt; セリ科シシウド属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/RKFGKuGwIB7mmVNA&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;テントウムシ入り。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/8C7u90X70Wq4sVqa&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;イタドリ &lt;em&gt;Fallopia japonica&lt;/em&gt; タデ科ソバカズラ属（旧：イタドリ属）&lt;br /&gt;
+基部が心形じゃないからオオじゃない。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/O8DMyCpEYLlPIjO8&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ギンバイソウ &lt;em&gt;Deinanthe bifida&lt;/em&gt; アジサイ科ギンバイソウ属&lt;br /&gt;
+花は終わってしまいました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/K2VEGzJGvkZmf7r8&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/6zyuGlFEFM0wDkhB&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;レンゲショウマ &lt;em&gt;Anemonopsis macrophylla&lt;/em&gt; キンポウゲ科レンゲショウマ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/3kLM7rmDI8ZlClvC&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;檜チップの道（いい香り）。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/hiM4MgbC8VPil6kG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;キホウキタケ&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/u2lISQQsSOHyl4bC&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;シロヨメナ &lt;em&gt;Aster ageratoides&lt;/em&gt; subsp. &lt;em&gt;leiophyllus&lt;/em&gt; キク科シオン属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/0is6rwY4SUgunkup&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;半低木じゃないし，大きく3裂しないから&lt;br /&gt;
+クサコアカソ &lt;em&gt;Boehmeria tricuspis&lt;/em&gt; var. &lt;em&gt;unicuspis&lt;/em&gt; イラクサ科ヤブマオ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/69HHKKDNn7boIa8P&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/fhvk3SiU7BGQhDsi&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;タマアジサイ &lt;em&gt;Hydrangea involucrata&lt;/em&gt; アジサイ科アジサイ属&lt;br /&gt;
+細鋸歯です。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/NnCRAkKxWvANdg2O&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ツリフネソウ &lt;em&gt;Impatiens textori&lt;/em&gt; ツリフネソウ科ツリフネソウ属&lt;br /&gt;
+キツリフネもあったけど，選り好みしてるうちに撮り忘れた。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/QdYfzsjl4wB0bM6B&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/hIyMsTf80oLV1RXu&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;クサボタン &lt;em&gt;Clematis stans&lt;/em&gt; キンポウゲ科センニンソウ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/cC3w2aVfsif0rpOl&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ダンコウバイ &lt;em&gt;Lindera obtusiloba&lt;/em&gt; クスノキ科クロモジ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/uq3AysEtazWJ0ZG7&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;セキヤノアキチョウジ &lt;em&gt;Isodon effusa&lt;/em&gt; シソ科ヤマハッカ属&lt;br /&gt;
+漢字で書くと「関屋の秋丁字」だそうです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/Gr0nqQGfGtgJRZaA&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;三頭大滝&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/vF6Wg6IFS7TcN60W&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ヌルデ &lt;em&gt;Rhus javanica&lt;/em&gt; var. &lt;em&gt;roxburghii&lt;/em&gt; ウルシ科ヌルデ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/NMiaevy91Ew1Ajmu&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ボタンヅル &lt;em&gt;Clematis apiifolia&lt;/em&gt; キンポウゲ科センニンソウ属&lt;br /&gt;
+花が終わって，羽のついた果実がなっているようです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/IRRJXagc3eU1S8en&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;コウモリソウ &lt;em&gt;Parasenecio hastata&lt;/em&gt; subsp. &lt;em&gt;farfaraefolia&lt;/em&gt; キク科コウモリソウ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/wAOgdXIhwKlPx3pP&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;キバナノホトトギス &lt;em&gt;Tricyrtis flava&lt;/em&gt; ユリ科ホトトギス属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/coVEqsqEMALOZp4W&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;キバナアキギリ &lt;em&gt;Salvia nipponica&lt;/em&gt; シソ科アキギリ属&lt;br /&gt;
+葉が三角状ほこ型で鋸歯があります。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/D2YJk4kHiOykHkKB&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/qwbPJ0sqbclEdoeO&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;イヌセンボンダケ&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/FY4k4zQI73dwJNyL&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;防鹿柵&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/f7vNdymg0qeSIsIZ&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/j72NmucdeQ0eWtDf&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ノブキ &lt;em&gt;Adenocaulon himalaicum&lt;/em&gt; キク科ノブキ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/4Sn3VVbWOSjz1fRv&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/lLVCyv6es2jjSM8d&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/UDWi4X9OoJyeTINF&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;素敵キャラ&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/9QCr4aRL4yEZQUFK&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;イヌショウマ &lt;em&gt;Cimicifuga japonica&lt;/em&gt; キンポウゲ科サラシナショウマ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/rrQy4cWVJbZBoUUW&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;花柄がほとんどない。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/08Aqqs2YYgbjsleG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ミズヒキ &lt;em&gt;Persicaria filiforme&lt;/em&gt; タデ科イヌタデ属（旧：ミズヒキ属）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/rCexFvJSw2nCL8Us&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;カメバヒキオコシ &lt;em&gt;Isodon umbrosa&lt;/em&gt; var. leucantha シソ科 ヤマハッカ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/lb6upVVCfL7w1qAb&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;オオイタヤメイゲツ &lt;em&gt;Acer shirasawanum&lt;/em&gt; ムクロジ科カエデ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/7ncx3FnOoXqJS0dg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;若葉ソフト&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/uGOxSGGellYD9pKp&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;レンゲショウマの実。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/P92ggbO9cotBDx1B&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/kPhaVsQC2dMVIzjb&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ソバナ &lt;em&gt;Adenophora remotiflora&lt;/em&gt; キキョウ科ツリガネニンジン属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/34kCZUoFtcXu0r0H&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/AfXxamj9KIE06UAN&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ミヤマガマズミ &lt;em&gt;Viburnum wrightii&lt;/em&gt; レンプクソウ科ガマズミ属（旧：スイカズラ科）&lt;br /&gt;
+「葉の表面が光る　葉脈が鮮明」と書いてある。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/tmFc2VsSBC8vey13&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;オヤマボクチ &lt;em&gt;Synurus pungens&lt;/em&gt; キク科ヤマボクチ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/77VhO2f8E7K17njX&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/xEuwiaeDpKHxeYH0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ムシカリ峠のムシカリ。&lt;br /&gt;
+ガマズミ &lt;em&gt;Viburnum dilatatum&lt;/em&gt; レンプクソウ科ガマズミ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/TSj8GGE9cCwE4Vuw&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;冬芽&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/uvzMSPDsUE6B0s9g&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;オクモミジハグマ &lt;em&gt;Ainsliaea acerifolia&lt;/em&gt; var. subapoda キク科モミジハグマ属&lt;br /&gt;
+白熊と書いてはぐま。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/49UhVmt9XwnzC0wr&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ユキザサ？ &lt;em&gt;Maianthemum japonica&lt;/em&gt; ユリ科マイヅルソウ属（旧：ユキザサ属）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/RuWyogUxajcEbXCw&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/SlX1RxWCmzFnTIBr&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/H1GT6FTjUNgvWj4l&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;クランクブナ&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/2SZ7pUCcPY76lD3p&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;頂上に到着。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/fvyOKXp67ZqDh0wa&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;シュロソウ &lt;em&gt;Veratrum maackii&lt;/em&gt; var. &lt;em&gt;japonicum&lt;/em&gt; シュロソウ科シュロソウ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/2yGW1r7DP8hAdmDr&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;白熊が一頭残ってた。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/GFqsURv3nVUgah66&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ヤマウルシの実。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/UKIfNuivNxVIvI6p&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ホツツジの実。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/nbGhVJH4ljfmF9nL&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;三つのうちの真ん中の頂上。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/8zfEORAIX6yoRQFK&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/Y7vnPp947PXpOPKH&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/jyoMz0nePzsR7zEH&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;アキノキリンソウ &lt;em&gt;Solidago virgaurea&lt;/em&gt; subsp. &lt;em&gt;asiatica&lt;/em&gt; キク科アキノキリンソウ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/ASvPo6sFZZWKpeOT&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/TcGMVUCX1NJuXjdo&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ウラジロモミ &lt;em&gt;Abies homolepis&lt;/em&gt; マツ科モミ属&lt;br /&gt;
+若枝に毛がない。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/TJZzlzhqhF3JE1KU&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ホツツジ &lt;em&gt;Elliottia paniculata&lt;/em&gt; ツツジ科ホツツジ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/obaGJFUQKkKdQ1vw&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;葉の裏に毛がないので&lt;br /&gt;
+ナガバノコウヤボウキ？ &lt;em&gt;Pertya glabrescens&lt;/em&gt; キク科コウヤボウキ属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/XWMvXVztZtEsDTPQ&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/rtqO1yA0HtWlcqtS&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/pS2p8hUr3y3ebphW&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ヤマホトトギス &lt;em&gt;Tricyrtis macropoda&lt;/em&gt; ユリ科ホトトギス属&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/EQj16TP2iWSXbUYI&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ツガ &lt;em&gt;Tsuga sieboldii&lt;/em&gt; マツ科ツガ属&lt;br /&gt;
+若枝に毛がない。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/fU1l3O11jAlLbZVz&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/466T3HjslLFb4HtW&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;カエンタケ&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/BkQPl1iqP1lyEmYJ&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/WGGTqGc1aFnKs9aw&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;「木製桟道」を再現した橋&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/CNgNm14pu0TonDSc&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;メグスリノキ&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/FxzcyOghBJMzONcm&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;メタカラコウ &lt;em&gt;Ligularia stenocephala&lt;/em&gt; キク科メタカラコウ属&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>EVALUATE文</title>
+      <link>https://yu-kosame.github.io/post/evaluate/</link>
+      <pubDate>Thu, 11 Sep 2014 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/evaluate/</guid>
+      <description>&lt;p&gt;PHP やってて，EVALUATE みたいなの使いたいなって調べてみたら，COBOL 特有の名称だった(笑)。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ln</title>
+      <link>https://yu-kosame.github.io/post/ln/</link>
+      <pubDate>Thu, 11 Sep 2014 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/ln/</guid>
+      <description>&lt;p&gt;シンボリックリンクの作成&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ln -s /home/usr/peko peko
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ls -l
+peko -&amp;gt; /home/usr/peko
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>blog start</title>
+      <link>https://yu-kosame.github.io/post/2014-09-07-blog-start/</link>
+      <pubDate>Sun, 07 Sep 2014 22:59:00 JST</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/2014-09-07-blog-start/</guid>
+      <description>
+
+&lt;h2 id=&#34;crotal-を始めた&#34;&gt;Crotal を始めた&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pip install crotal
+cd /home/user/                                   # ソースを置くディレクトリに移動
+crotal init sitename                             # 新しいサイトの作成
+cd sitename/
+crotal generate sitename 
+crotal server                                    # localhost:8000でプレビュー
+crotal new_post &#39;blog start&#39;                     # 新しい投稿
+vim source/posts/2014-09-07-blog-start.markdown  # 投稿の編集
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;crotal-のデプロイ&#34;&gt;Crotal のデプロイ&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;crotal generate -f
+rsync -r _sites/ /var/www/crotal  # 公開用サーバで編集してるので crotal deploy は使わない
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# httpd.conf l.292
+DocumentRoot &amp;quot;/var/www/crotal&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;apachectl restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;crotal-の設定-調整&#34;&gt;Crotal の設定・調整&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim _config.yml  # いろいろ
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;iPhoneで見ると幅が少し広いらしく，ふよふよするので変更する&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# themes/default/static/css/style.css
+.container { width: 320px; }  # l.295 350px -&amp;gt; 320px
+
+.left-area { width: 320px; }  # l.300 350px -&amp;gt; 320px
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;段落 p の下の行間がやや広いので変更する&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# themes/default/static/css/style.css
+.entry p {font-size: 18px; margin-top: 0.25em; line-height: 1.25; }  # l.146
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;見出しの下の行間がやや広いので変更する&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# themes/default/static/css/style.css
+h1, h2, h3, h4, h5, h6 { margin-bottom: 0.25em; color: \#111; line-height: 1em; font-weight: normal; }  # 1em -&amp;gt; 0.25em
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>暑い日の御岳山</title>
+      <link>https://yu-kosame.github.io/post/2014-09-10-mitakesan/</link>
+      <pubDate>Wed, 16 Jul 2014 00:00:00 JST</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/2014-09-10-mitakesan/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://copy.com/QPb4gh8eRdYB&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;御岳山 -&amp;gt; 大岳山 -&amp;gt; 御岳山&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/S2PStjRjH3av&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ケーブルカー&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/j93jayx0J9ffeN3k&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ホオジロ（さえずり練習中）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/jw2ULQNcOHAo7hBP&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;オオモミジ？&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/Q0yNh3fmoBEwrWGA&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ニホントカゲの若者&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/kAlVhZYWxpcvwDcd&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ユキノシタ&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/TCIjyHvghHPmPUCh&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;対生で鋸歯が10対以下で，コアカソ（イラクサ科ヤブマオ属）？&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/xGh91wvEJcRYLqZu&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;樹齢1000年の神代ケヤキ（国指定天然記念物）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/SQZdwvnvqtz7pKDE&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;アジサイと，八重だからヤブカンゾウ（ススキノキ科ワスレグサ属）？&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/PeQ1kgldQwxJB6gl&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;御岳神社&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/M7p9sCuJVTHbvbGb&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;御岳神社からの眺め&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/Z1vSXQAmqz8SRgtJ&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ホトトギス属の葉&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/3XSkXhMDTl4ixEGC&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;天狗の腰掛け杉&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/fRes1EsSzg3arRKZ&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;マタタビ&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/1A46Dzl0YyUs7XTK&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ギンバイソウ と ヨツスジハナカミキリ&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/xuQUpPmoWoDywVyW&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/NJihPjhWt9SbzGAX&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ハシゴシダ（ヒメシダ科ヒメシダ属）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/GMbxaXjQ1vkIL6DP&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ブナもいるよ。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/uXqhvaiuMCBTteD7&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;マムシグサのなかまは難しいです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/nPEKuATAPCIcXBAl&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/fSEp2DGS9deMUZHx&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;大岳神社&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/LSEX3mX7lZCy7Pyf&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/L4zUJfJ37LUfFWOS&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/XRnFrQuFwrd9r94z&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;なんとかヒョウモン？&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/0BzZi4hcwdQiajqD&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/f1ZYPRzgzcxIW1To&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ナツツバキ（ツバキ科ナツツバキ属）。&lt;br /&gt;
+ヒメシャラは箱根以西にしかいないらしい。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/VHLCy9JHt9byMOHb&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ミズナラもいるよ。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/XnXYCHWH4V3sAcSr&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;副萼片がないように見えるので，ヤマホタルブクロ（キキョウ科ホタルブクロ属）かも。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/hIyZp4Gxxif8eiw2&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ブナとスズタケを一緒に撮りたかったんだけど，ぶれました。&lt;br /&gt;
+スズタケは肩毛がないそうです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/e2iBdOKoQcPW4Svf&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ギンバイソウ（アジサイ科ギンバイソウ属）&lt;br /&gt;
+銀の梅の草。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/3nDECaOtMdJWWYzD&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/VmrEodgxvIYX8QmM&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ヤマアジサイ（アジサイ科アジサイ属）&lt;br /&gt;
+葉は幅狭く、表面に光沢なく、両面に毛が散生しているそうです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/SYskOItXjo4YRv6z&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;クサアジサイ（アジサイ科クサアジサイ属）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/DjXUelMapSucb6Uz&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;上品なシダがいらっしゃいました。&lt;br /&gt;
+羽軸は太い溝なので、イワトラノオ（チャセンシダ科チャセンシダ属）でしょうか。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/ZhYeW4BVF4vZ4RLB&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/srhsAHN9zN4jEvdi&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/gOmFPtkwP8Odnn0T&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/b6ycn29AzBtcDxxc&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;タマガワホトトギス（ユリ科ホトトギス属）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/v1r4DX4yK0wIiVDQ&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/IQCkvUsYPtXz8CPj&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;岩からいきなり イワタバコ（イワタバコ科イワタバコ属）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/YKbTowxmFyOtmbJ0&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ウバユリ（ユリ科ウバユリ属）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/AggbmJrHUmLv3aMI&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;こっち向き。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/JsvYKU2eoOSCYhga&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/zz8yA30Rxfr6oS9m&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/6pTFFMHB9mCQjfTN&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/W9T481qSIZRnAVuN&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;天狗さん&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/7nStueMlbD6eLxyw&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;クサアジサイ&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/3BwlhexclIX8PpIV&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;マタタビ（マタタビ科マタタビ属）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/WM1QVoo0gZx8E8TS&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ナンテンハギ（マメ科ソラマメ属）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/GIQrCmUjTIzQ3RPv&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;オカトラノオ（サクラソウ科オカトラノオ属）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/FAPxyDJ1pSiZaTpY&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/79plpeBOcfZjO17b&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;タマアジサイ（アジサイ科アジサイ属）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/F0ms3urji4i9gzRz&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/koEXWPN23ACB0SCb&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/pPPHMqviMqV8DiDJ&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/cJXj9Ei7TXdH2iX4&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;シラサギと？ ルリビタキ？&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/aCHU1f60hZj3dMuZ&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://copy.com/PrIZuBfNGK8kNpCi&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;どゆこと？ ムササビ&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ramdisk</title>
+      <link>https://yu-kosame.github.io/post/ramdisk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/ramdisk/</guid>
+      <description>
+
+&lt;h2 id=&#34;ソフトのインストール&#34;&gt;ソフトのインストール&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.vector.co.jp/soft/winnt/hardware/se502682.html&#34;&gt;SoftPerfect RAM Disk&lt;/a&gt; をインストールしました。
+インストーラは，基本，「Next &amp;gt;」で進んでいけば大丈夫でした。
+途中，KEG記憶域コントローラー をインストールするか聞かれるので，参考のサイトに習って，インストールしました。&lt;/p&gt;
+
+&lt;h2 id=&#34;ramディスク作成&#34;&gt;RAMディスク作成&lt;/h2&gt;
+
+&lt;p&gt;「RAMディスク」-&amp;gt;「RAMディスクの追加/編集」&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;容量（MB）: 1,024
+ドライブ名 : R:
+ファイルシステム : NTFS
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;バックアップの設定&#34;&gt;バックアップの設定&lt;/h2&gt;
+
+&lt;h2 id=&#34;tempファイルの移行&#34;&gt;tempファイルの移行&lt;/h2&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://bto-pc.jp/btopc-com/repair/ramdisk-win7-64bit-freesoft.html&#34;&gt;bto-pc.jp/btopc-com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>du でディレクトリの容量を調べる</title>
+      <link>https://yu-kosame.github.io/post/du/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/du/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;du -hs ***
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;-h で適した単位にしてくれる。&lt;br /&gt;
+-s でディレクトリ内のファイルを表示しない。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>keyboard</title>
+      <link>https://yu-kosame.github.io/post/keyboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/keyboard/</guid>
+      <description>
+
+&lt;p&gt;いろんな環境でのキーボード操作を統一したい。
+主に，半角全角切り替えと，Ctrl について。&lt;/p&gt;
+
+&lt;h2 id=&#34;mac&#34;&gt;Mac&lt;/h2&gt;
+
+&lt;h2 id=&#34;win7-in-vmware-on-mac&#34;&gt;win7 in vmware on Mac&lt;/h2&gt;
+
+&lt;h2 id=&#34;win7-macからリモートでつなぐときがある&#34;&gt;win7（Macからリモートでつなぐときがある）&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mac からの ssh で接続が切れないようにする</title>
+      <link>https://yu-kosame.github.io/post/ssh_mac/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/ssh_mac/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# ~/.ssh/config
+ServerAliveInterval 60  # 60秒に一回何かを送る
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;参考：
+&lt;a href=&#34;http://superbrothers.hatenablog.com/entry/20090825/1251211696&#34;&gt;ssh接続が勝手に切れちゃう場合の対処法 - すぱぶろ&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>postgresql_conf</title>
+      <link>https://yu-kosame.github.io/post/postgresql_conf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/postgresql_conf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>remote_mac2win7home</title>
+      <link>https://yu-kosame.github.io/post/remote_mac2win7home/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/remote_mac2win7home/</guid>
+      <description>
+
+&lt;h2 id=&#34;windows-7-home-premium-でリモート接続を許可できるようにする&#34;&gt;Windows 7 Home Premium でリモート接続を許可できるようにする&lt;/h2&gt;
+
+&lt;p&gt;Concurrent RDP Patcher
+というソフト（パッチ？）を使います。&lt;/p&gt;
+
+&lt;p&gt;参考のサイトによると，WindowsUpdateによって，使えなくなるときがあるみたいです。
+その対応をしたバージョンを参考サイトのリンクからいただきましたが，現在はリンクが切れています（2014.12.25）。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://orebibou.com/2014/11/%E3%80%8Econcurrent-rdp-patcher%E3%80%8F%E3%81%A7%E6%9C%89%E5%8A%B9%E5%8C%96%E3%81%97%E3%81%9Fwindows-7-home-premium%E3%81%AE%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88/&#34;&gt;orebibou.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>scp</title>
+      <link>https://yu-kosame.github.io/post/scp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/scp/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;scp -P xxxx /Users/***/Desktop/***.txt root@***.***.***.***:
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>the里山 小野路</title>
+      <link>https://yu-kosame.github.io/post/onoji/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/onoji/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;タマノカンアオイ&lt;/li&gt;
+&lt;li&gt;シロダモ&lt;/li&gt;
+&lt;li&gt;キヅタ&lt;/li&gt;
+&lt;li&gt;イノモトソウ科&lt;/li&gt;
+&lt;li&gt;ヒサカキ&lt;/li&gt;
+&lt;li&gt;ツワブキ&lt;/li&gt;
+&lt;li&gt;ナンテン&lt;/li&gt;
+&lt;li&gt;きゅるきゅるメジロ&lt;/li&gt;
+&lt;li&gt;イタチシダの仲間&lt;/li&gt;
+&lt;li&gt;シロハラかアカハラの地鳴き&lt;/li&gt;
+&lt;li&gt;サイハイラン&lt;/li&gt;
+&lt;li&gt;サルトリイバラ&lt;/li&gt;
+&lt;li&gt;センニンソウ&lt;/li&gt;
+&lt;li&gt;マユミ&lt;/li&gt;
+&lt;li&gt;トウカエデ&lt;/li&gt;
+&lt;li&gt;コモチシダのなかま&lt;/li&gt;
+&lt;li&gt;ホシダのなかま&lt;/li&gt;
+&lt;li&gt;ホラシノブ&lt;/li&gt;
+&lt;li&gt;ジシバリ&lt;/li&gt;
+&lt;li&gt;ジュズダマ&lt;/li&gt;
+&lt;li&gt;カニクサ&lt;/li&gt;
+&lt;li&gt;シチカズラ&lt;/li&gt;
+&lt;li&gt;キツネノマゴ&lt;/li&gt;
+&lt;li&gt;スミレ？&lt;/li&gt;
+&lt;li&gt;ベニバナボロギク&lt;/li&gt;
+&lt;li&gt;ゴンズイ&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

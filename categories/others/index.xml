@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Others on ゆこさめ． </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>https://yu-kosame.github.io/categories/others/</link>
+    <language>ja-jp</language>
+    <author>ruta</author>
+    
+    <updated>Wed, 01 Oct 2014 00:00:00 UTC</updated>
+    
+    <item>
+      <title>OpenShift にさわってみた</title>
+      <link>https://yu-kosame.github.io/post/openshift/</link>
+      <pubDate>Wed, 01 Oct 2014 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/openshift/</guid>
+      <description>
+
+&lt;h2 id=&#34;アカウント登録&#34;&gt;アカウント登録&lt;/h2&gt;
+
+&lt;p&gt;OpenShift online に登録しました。&lt;br /&gt;
+その過程で，メールの URL から認証するところでなぜかエラーになりましたが，次の日アクセスするとうまくできました。&lt;/p&gt;
+
+&lt;h2 id=&#34;アプリ登録&#34;&gt;アプリ登録&lt;/h2&gt;
+
+&lt;p&gt;Django を選択し，その後いろいろ設定します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Public URL  : [appname]-[domainname].rhcloud.com  
+Source Code : git:/github.com/openshift/django-example.git  
+Cartridges  : Python 2.7  
+Scaling     : No scaling  
+Region      : No preference  
+[Create Application]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;ページの確認&#34;&gt;ページの確認&lt;/h2&gt;
+
+&lt;p&gt;admin へのリンクに進むと，もうデプロイできてる…！&lt;/p&gt;
+
+&lt;h2 id=&#34;公開鍵の登録&#34;&gt;公開鍵の登録&lt;/h2&gt;
+
+&lt;p&gt;mac の場合，&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-keygen
+vim /Users/username/.ssh/id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;OpenShift の&amp;rdquo;Set an SSH key&amp;rdquo; にコピペする。&lt;/p&gt;
+
+&lt;p&gt;参考：
+&lt;a href=&#34;http://d.hatena.ne.jp/uco_twinkle/20080409/1207703829&#34;&gt;Mac OS X でSSH公開鍵を作成する - マークアッパーなアタシのための雑記&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;クライアントツールをインストールする&#34;&gt;クライアントツールをインストールする&lt;/h2&gt;
+
+&lt;p&gt;mac の場合（自分memo）&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Ruby はインストール済み&lt;/li&gt;
+&lt;li&gt;git もインストール済み&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sudo gem install rhc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rhc setup&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;Login to openshift.redhat.com: ***@***com # アカウント名
+Password: ***
+
+Generate a token now? (yes|no) yes
+
+Your public SSH key must be uploaded to the OpenShift server to access code.  Upload now? (yes|no) yes # さっきコピペしたんだけどな…
+
+Your client tools are now configured.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;参考：
+&lt;a href=&#34;https://developers.openshift.com/en/getting-started-client-tools.html&#34;&gt;Installing Client Tools | OpenShift Developers&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;アプリの編集&#34;&gt;アプリの編集&lt;/h2&gt;
+
+&lt;p&gt;web インターフェイスの Eclipse plugin もあるけど，コマンドラインのほうがおすすめらしい。&lt;br /&gt;
+公式ドキュメントにはコマンドラインでのアプリ作成方法が載ってますが，web 画面で作ったのでとばす。&lt;/p&gt;
+
+&lt;h3 id=&#34;ローカルにコピー&#34;&gt;ローカルにコピー&lt;/h3&gt;
+
+&lt;p&gt;コマンドラインからつくると，Git Repository が自動的にローカルに保存してくれるらしいですが，web の人は，アプリのページの &amp;ldquo;Source Code&amp;rdquo; の URL をコピーして，&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone ssh:/.../ /Users/***/appname
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;などとします。&lt;/p&gt;
+
+&lt;p&gt;こうやって，ローカルで編集するということですね。&lt;/p&gt;
+
+&lt;h3 id=&#34;git-を使い始める&#34;&gt;git を使い始める&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd /Users/***/appname
+git init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;変更後-再投稿する&#34;&gt;（変更後）再投稿する&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
+git commit -m &amp;quot;some title&amp;quot;
+git push
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ローカルに落としたフォルダ内の README.md をみると，&lt;code&gt;git push&lt;/code&gt; の後，django admin のユーザ名とパスワードが流れるから気をつけろと書いてある。&lt;br /&gt;
+なので，よーく探したけど，見つからなかった…。&lt;/p&gt;
+
+&lt;p&gt;調べてみるとエラーらしく，&lt;a href=&#34;https://forums.openshift.com/how-to-login-on-the-admin-painel&#34;&gt;How to login on the admin painel? | OpenShift Forums&lt;/a&gt; に
+    Django has a standard command to solve this problem:&lt;br /&gt;
+        1. Login using ssh
+        2. Goto the repo/wsgi/openshift directory
+        3. type: ./manage.py createsuperuser (and follow instructions)
+とあったので，&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh 128d6...@appname-domainname.rhcroud.com
+cd app-root/repo/wsgi/openshift
+.manage.py createsuperuser
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;と，しました。&lt;/p&gt;
+
+&lt;p&gt;これで，admin ページに入れました。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://workpiles.com/2014/06/openshift-django-web/&#34;&gt;OpenshiftでDjango | Workpiles&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

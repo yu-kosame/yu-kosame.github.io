@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Win7 on ゆこさめ． </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>https://yu-kosame.github.io/categories/win7/</link>
+    <language>ja-jp</language>
+    <author>ruta</author>
+    
+    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Ramdisk</title>
+      <link>https://yu-kosame.github.io/post/ramdisk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/ramdisk/</guid>
+      <description>
+
+&lt;h2 id=&#34;ソフトのインストール&#34;&gt;ソフトのインストール&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.vector.co.jp/soft/winnt/hardware/se502682.html&#34;&gt;SoftPerfect RAM Disk&lt;/a&gt; をインストールしました。
+インストーラは，基本，「Next &amp;gt;」で進んでいけば大丈夫でした。
+途中，KEG記憶域コントローラー をインストールするか聞かれるので，参考のサイトに習って，インストールしました。&lt;/p&gt;
+
+&lt;h2 id=&#34;ramディスク作成&#34;&gt;RAMディスク作成&lt;/h2&gt;
+
+&lt;p&gt;「RAMディスク」-&amp;gt;「RAMディスクの追加/編集」&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;容量（MB）: 1,024
+ドライブ名 : R:
+ファイルシステム : NTFS
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;バックアップの設定&#34;&gt;バックアップの設定&lt;/h2&gt;
+
+&lt;h2 id=&#34;tempファイルの移行&#34;&gt;tempファイルの移行&lt;/h2&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://bto-pc.jp/btopc-com/repair/ramdisk-win7-64bit-freesoft.html&#34;&gt;bto-pc.jp/btopc-com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>remote_mac2win7home</title>
+      <link>https://yu-kosame.github.io/post/remote_mac2win7home/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+      <author>ruta</author>
+      <guid>https://yu-kosame.github.io/post/remote_mac2win7home/</guid>
+      <description>
+
+&lt;h2 id=&#34;windows-7-home-premium-でリモート接続を許可できるようにする&#34;&gt;Windows 7 Home Premium でリモート接続を許可できるようにする&lt;/h2&gt;
+
+&lt;p&gt;Concurrent RDP Patcher
+というソフト（パッチ？）を使います。&lt;/p&gt;
+
+&lt;p&gt;参考のサイトによると，WindowsUpdateによって，使えなくなるときがあるみたいです。
+その対応をしたバージョンを参考サイトのリンクからいただきましたが，現在はリンクが切れています（2014.12.25）。&lt;/p&gt;
+
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://orebibou.com/2014/11/%E3%80%8Econcurrent-rdp-patcher%E3%80%8F%E3%81%A7%E6%9C%89%E5%8A%B9%E5%8C%96%E3%81%97%E3%81%9Fwindows-7-home-premium%E3%81%AE%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88/&#34;&gt;orebibou.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

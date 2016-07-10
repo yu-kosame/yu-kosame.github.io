@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>hello world - ゆこさめ．</title>
+	<title>メモリ使用状況を調べる - ゆこさめ．</title>
 	<meta name="author" content="map[name:ruta email:]">
 
 	
@@ -17,7 +17,7 @@
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     
-	<link rel="canonical" href="https://yu-kosame.github.io/post/hello-world/">
+	<link rel="canonical" href="https://yu-kosame.github.io/post/memory/">
 	<link href="https://yu-kosame.github.io//favicon.png" rel="shortcut icon">
 	<link href="https://yu-kosame.github.io//css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="https://yu-kosame.github.io//css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -74,8 +74,36 @@
 				<div id="content" class="inner">
 					<div itemscope itemtype="http://schema.org/Blog">
 					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <h1 class="title" itemprop="name">hello world</h1>
-	<div class="entry-content" itemprop="articleBody"><p>hugo で webサイト再構築。またね、clotal。</p>
+    <h1 class="title" itemprop="name">メモリ使用状況を調べる</h1>
+	<div class="entry-content" itemprop="articleBody">
+
+<h2 id="メモリ空き状況">メモリ空き状況</h2>
+
+<pre><code class="language-bash">free
+</code></pre>
+
+<p>free をみて，何の用途にも使っていない物理メモリ量を確認。</p>
+
+<pre><code class="language-bash">vmstat -a
+</code></pre>
+
+<p>Inact をみて，キャッシュのうち，すぐ捨てられるページを確認。</p>
+
+<h2 id="どんなプロセスが動いているか">どんなプロセスが動いているか</h2>
+
+<pre><code class="language-bash">top
+</code></pre>
+
+<p>または，</p>
+
+<pre><code class="language-bash">ps -aux
+</code></pre>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+<li><a href="http://www.atmarkit.co.jp/ait/articles/0810/01/news134.html">Linuxトラブルシューティング探偵団　番外編（1）：減り続けるメモリ残量！ 果たしてその原因は!? (<sup>1</sup>&frasl;<sub>3</sub>) - ＠IT</a></li>
+</ul>
 </div></article>
 					
 						<div class="share">
