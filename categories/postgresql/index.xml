@@ -1,36 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Postgresql on ゆこさめ． </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
+    <title>Postgresql on ゆこさめ．</title>
     <link>https://yu-kosame.github.io/categories/postgresql/</link>
+    <description>Recent content in Postgresql on ゆこさめ．</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <author>ruta</author>
-    
-    <updated>Mon, 01 Jan 0001 00:00:00 UTC</updated>
+    <lastBuildDate>Thu, 09 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yu-kosame.github.io/categories/postgresql/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>timing で postgresql の処理時間計測</title>
       <link>https://yu-kosame.github.io/post/timing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      <author>ruta</author>
+      <pubDate>Thu, 09 Oct 2014 00:00:00 +0000</pubDate>
+      
       <guid>https://yu-kosame.github.io/post/timing/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-psql&#34;&gt;postgres=# \timing
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;参考：&lt;a href=&#34;http://d.hatena.ne.jp/kurita1/20090428&#34;&gt;postgresql psql 実行時間を計測 - external storage&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>postgres=# \timing 参考：postgresql psql 実行時間を計測 - external storage</description>
     </item>
     
     <item>
       <title>データベースの名前変更</title>
       <link>https://yu-kosame.github.io/post/db_rename/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      <author>ruta</author>
+      <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
+      
       <guid>https://yu-kosame.github.io/post/db_rename/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;ALTER DATABASE WIKIPE RENAME TO ANALYSIS;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>ALTER DATABASE WIKIPE RENAME TO ANALYSIS;</description>
     </item>
     
   </channel>

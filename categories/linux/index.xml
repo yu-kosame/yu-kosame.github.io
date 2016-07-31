@@ -1,103 +1,57 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Linux on ゆこさめ． </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
+    <title>Linux on ゆこさめ．</title>
     <link>https://yu-kosame.github.io/categories/linux/</link>
+    <description>Recent content in Linux on ゆこさめ．</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <author>ruta</author>
-    
-    <updated>Thu, 11 Sep 2014 00:00:00 UTC</updated>
-    
-    <item>
-      <title>ln</title>
-      <link>https://yu-kosame.github.io/post/ln/</link>
-      <pubDate>Thu, 11 Sep 2014 00:00:00 UTC</pubDate>
-      <author>ruta</author>
-      <guid>https://yu-kosame.github.io/post/ln/</guid>
-      <description>&lt;p&gt;シンボリックリンクの作成&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ln -s /home/usr/peko peko
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ls -l
-peko -&amp;gt; /home/usr/peko
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
+    <lastBuildDate>Wed, 08 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://yu-kosame.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>du でディレクトリの容量を調べる</title>
       <link>https://yu-kosame.github.io/post/du/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      <author>ruta</author>
+      <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
+      
       <guid>https://yu-kosame.github.io/post/du/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;du -hs ***
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;-h で適した単位にしてくれる。&lt;br /&gt;
--s でディレクトリ内のファイルを表示しない。&lt;/p&gt;
-</description>
+      <description>du -hs *** -h で適した単位にしてくれる。 -s でディレクトリ内のファイルを表示しない。</description>
     </item>
     
     <item>
       <title>scp</title>
       <link>https://yu-kosame.github.io/post/scp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      <author>ruta</author>
+      <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
+      
       <guid>https://yu-kosame.github.io/post/scp/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;scp -P xxxx /Users/***/Desktop/***.txt root@***.***.***.***:
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>scp -P xxxx /Users/***/Desktop/***.txt root@***.***.***.***:</description>
     </item>
     
     <item>
       <title>メモリ使用状況を調べる</title>
       <link>https://yu-kosame.github.io/post/memory/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      <author>ruta</author>
+      <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
+      
       <guid>https://yu-kosame.github.io/post/memory/</guid>
-      <description>
-
-&lt;h2 id=&#34;メモリ空き状況&#34;&gt;メモリ空き状況&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;free
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;free をみて，何の用途にも使っていない物理メモリ量を確認。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vmstat -a
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Inact をみて，キャッシュのうち，すぐ捨てられるページを確認。&lt;/p&gt;
-
-&lt;h2 id=&#34;どんなプロセスが動いているか&#34;&gt;どんなプロセスが動いているか&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;top
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;または，&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ps -aux
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.atmarkit.co.jp/ait/articles/0810/01/news134.html&#34;&gt;Linuxトラブルシューティング探偵団　番外編（1）：減り続けるメモリ残量！ 果たしてその原因は!? (&lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt;) - ＠IT&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>メモリ空き状況 free free をみて，何の用途にも使っていない物理メモリ量を確認。 vmstat -a Inact をみて，キャッシュのうち，すぐ捨てられるページを確認。 どんなプロセスが動いているか top または， ps -aux 参考 Linuxトラブルシューティング探偵団 番外編（1）：減り続けるメモリ残量！ 果たしてその原因は!? (1&amp;frasl;3) - ＠IT</description>
     </item>
     
     <item>
       <title>再帰的 mkdir</title>
       <link>https://yu-kosame.github.io/post/mkdir/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-      <author>ruta</author>
+      <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
+      
       <guid>https://yu-kosame.github.io/post/mkdir/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir -p dir1/dir2  # -p オプションをつける
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>mkdir -p dir1/dir2 # -p オプションをつける</description>
+    </item>
+    
+    <item>
+      <title>ln</title>
+      <link>https://yu-kosame.github.io/post/ln/</link>
+      <pubDate>Thu, 11 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/ln/</guid>
+      <description>シンボリックリンクの作成 ln -s /home/usr/peko peko ls -l peko -&amp;gt; /home/usr/peko</description>
     </item>
     
   </channel>
