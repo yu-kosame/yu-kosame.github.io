@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Field on 解析屋こさめ</title>
-    <link>https://yu-kosame.github.io/categories/field/</link>
+    <link>https://yu-kosame.github.io/categories/field/index.xml</link>
     <description>Recent content in Field on 解析屋こさめ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 May 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yu-kosame.github.io/categories/field/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/field/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>新芽の頃の龍飛岬</title>
@@ -15,7 +14,7 @@
       <pubDate>Sat, 02 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/tappi/</guid>
-      <description>2015.05.02 岬 ja.name s.name note キジバト Streptopelia orientalis オオハム Gavia arctica ウミネコ Larus crassirostris トウゾクカモメ Stercorarius pomarinus 自分は見逃した ミサゴ Pandion haliaetus ノスリ Buteo buteo モズ Lanius bucephalus ハシブトガラス Corvus macrorhynchos ヤマガラ Poecile varius ヒガラ Periparus ater シジュウカラ Parus minor ヒヨドリ Hypsipetes amaurotis ウグイス Cettia diphone メジロ Zosterops japonicus ホオジロ Emberiza cioides キタオットセイ Callorhinus ursinus イルカ - マイルカ？ 海がとーってもきれい。 ホオジロと北海道 キタオットセイ 眺めてるうちに，夕日が雲に分割される 夕食の魚を獲ったミサゴ 2015.05.03 岬 ja.name s.name note キジバト Streptopelia orientalis ヒメウ Phalacrocorax pelagicus ツツドリ Cuculus optatus 赤色型 ユリカモメ Larus ridibundus +羽がV字に水面を飛ぶ ウミネコ Larus crassirostris ウトウ Cerorhinca monocerata 潜るときぱたっと羽を広げるのが見えた ハイタカ Accipiter nisus サンショウクイ Pericrocotus divaricatus ちらっと。ぴりり！ ハシブトガラス Corvus macrorhynchos ヒヨドリ Hypsipetes amaurotis ウグイス Cettia diphone メジロ Zosterops japonicus イソヒヨドリ Monticola solitarius ニュウナイスズメ Passer rutilans イカル Eophona personata ホオジロ Emberiza cioides 今朝は近くの灯台も霧の中 ヒヨドリ達の決心 あじさいロードの新芽は色とりどり 橋の下の沢に咲いているのは，オオカメノキ ヤグルマソウの花みたの初めてかもなぁ，と写真撮ったけど 図鑑と花がぜんぜん違う…！ どうやらフキの雌株が下に隠れてるらしい。 静かなところ（夜） ja.name s.name note トラツグミ Zoothera dauma 声 2015.05.04 今朝も岬は霧の中。写真は防衛省の建物だそうです。 あじさいロード ja.name s.name note トビ Milvus migrans アオゲラ Picus awokera 声：ひょー*3 ハヤブサ Falco peregrinus みゃあーおー等 カケス Garrulus glandarius 声 ヒヨドリ Hypsipetes amaurotis ウグイス Cettia diphone ヤブサメ Urosphena squameiceps 声：しししししし… エゾムシクイ Phylloscopus borealoides 声：ひーつーきー センダイムシクイ Phylloscopus coronatus ちよちよびー クロツグミ Turdus cardis ガビチョウみたいな声（本家に失礼） アカハラ Turdus chrysolaus びっくりしてた ツグミ Turdus naumanni コルリ Luscinia cyane 声 ルリビタキ Tarsiger cyanurus 声 イソヒヨドリ Monticola solitarius キビタキ Ficedula narcissina オオルリ Cyanoptila cyanomelana 声 ベニマシコ Uragus sibiricus アオジ Emberiza spodocephala 夏羽，さえずりは複雑 ニホンザル Macaca fuscata ときどき，カツラを見かけた。 秋は甘い香りの道なのかな。 道でくつろいでた子連れの群れに，一時よけてもらった。 岬 ja.name s.name note キジバト Streptopelia orientalis ミサゴ Pandion haliaetus ハヤブサ Falco peregrinus ヒヨドリを捕獲 ハシブトガラス Corvus macrorhynchos ヒヨドリ Hypsipetes amaurotis ウグイス Cettia diphone メジロ Zosterops japonicus Bombycilla sp.</description>
+      <description>2015.05.02 岬    ja.name s.name note     キジバト Streptopelia orientalis    オオハム Gavia arctica    ウミネコ Larus crassirostris    トウゾクカモメ Stercorarius pomarinus 自分は見逃した   ミサゴ Pandion haliaetus    ノスリ Buteo buteo    モズ Lanius bucephalus    ハシブトガラス Corvus macrorhynchos    ヤマガラ Poecile varius    ヒガラ Periparus ater    シジュウカラ Parus minor    ヒヨドリ Hypsipetes amaurotis    ウグイス Cettia diphone    メジロ Zosterops japonicus    ホオジロ Emberiza cioides    キタオットセイ Callorhinus ursinus    イルカ - マイルカ？</description>
     </item>
     
     <item>
@@ -25,7 +24,8 @@
       
       <guid>https://yu-kosame.github.io/post/kitamoto/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://yu-kosame.github.io/pict/kawasemi_20150315.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -37,7 +37,8 @@
       <description>&lt;p&gt;&lt;img src=&#34;https://yu-kosame.github.io/pict/20150201_inokashira/P1000720.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;井の頭公園に行きました。&lt;/p&gt;
-</description>
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -46,7 +47,16 @@
       <pubDate>Fri, 02 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/kinchakuda_isanuma/</guid>
-      <description>巾着田周辺 どこにいるでしょう？ モズ♀ 伊佐沼 ヒドリガモ ユリカモメ隊長率いるコガモ隊のみなさん</description>
+      <description>巾着田周辺 どこにいるでしょう？
+
+
+
+
+モズ♀
+
+伊佐沼 
+ヒドリガモ
+ユリカモメ隊長率いるコガモ隊のみなさん</description>
     </item>
     
     <item>
@@ -55,7 +65,7 @@
       <pubDate>Mon, 24 Nov 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/onoji/</guid>
-      <description>タマノカンアオイ シロダモ キヅタ イノモトソウ科 ヒサカキ ツワブキ ナンテン きゅるきゅるメジロ イタチシダの仲間 シロハラかアカハラの地鳴き サイハイラン サルトリイバラ センニンソウ マユミ トウカエデ コモチシダのなかま ホシダのなかま ホラシノブ ジシバリ ジュズダマ カニクサ シチカズラ キツネノマゴ スミレ？ ベニバナボロギク ゴンズイ</description>
+      <description> タマノカンアオイ シロダモ キヅタ イノモトソウ科 ヒサカキ ツワブキ ナンテン きゅるきゅるメジロ イタチシダの仲間 シロハラかアカハラの地鳴き サイハイラン サルトリイバラ センニンソウ マユミ トウカエデ コモチシダのなかま ホシダのなかま ホラシノブ ジシバリ ジュズダマ カニクサ シチカズラ キツネノマゴ スミレ？ ベニバナボロギク ゴンズイ  </description>
     </item>
     
     <item>
@@ -68,7 +78,8 @@
 アルプの里の写真です。&lt;/p&gt;
 
 &lt;p&gt;たくさんの植栽の高山植物を見れて楽しかったです。&lt;/p&gt;
-</description>
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -78,7 +89,8 @@
       
       <guid>https://yu-kosame.github.io/post/yatsuhigata/</guid>
       <description>&lt;p&gt;![]()&lt;/p&gt;
-</description>
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -90,7 +102,8 @@
       <description>&lt;p&gt;&lt;img src=&#34;https://copy.com/f7vNdymg0qeSIsIZ&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;三頭山に行きました。&lt;/p&gt;
-</description>
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -102,7 +115,8 @@
       <description>&lt;p&gt;&lt;img src=&#34;https://copy.com/QPb4gh8eRdYB&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;御岳山 -&amp;gt; 大岳山 -&amp;gt; 御岳山&lt;/p&gt;
-</description>
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

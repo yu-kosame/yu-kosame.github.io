@@ -2,12 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Others on 解析屋こさめ</title>
-    <link>https://yu-kosame.github.io/categories/others/</link>
+    <link>https://yu-kosame.github.io/categories/others/index.xml</link>
     <description>Recent content in Others on 解析屋こさめ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Oct 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yu-kosame.github.io/categories/others/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/others/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>mac からの ssh で接続が切れないようにする</title>
+      <link>https://yu-kosame.github.io/post/ssh_mac/</link>
+      <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/ssh_mac/</guid>
+      <description># ~/.ssh/config ServerAliveInterval 60 # 60秒に一回何かを送る  参考： ssh接続が勝手に切れちゃう場合の対処法 - すぱぶろ</description>
+    </item>
     
     <item>
       <title>OpenShift にさわってみた</title>
@@ -15,7 +23,16 @@
       <pubDate>Wed, 01 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/openshift/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>blog start</title>
+      <link>https://yu-kosame.github.io/post/2014-09-07-blog-start/</link>
+      <pubDate>Sun, 07 Sep 2014 22:59:00 +0900</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/2014-09-07-blog-start/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

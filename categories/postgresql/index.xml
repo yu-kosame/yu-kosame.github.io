@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Postgresql on 解析屋こさめ</title>
-    <link>https://yu-kosame.github.io/categories/postgresql/</link>
+    <link>https://yu-kosame.github.io/categories/postgresql/index.xml</link>
     <description>Recent content in Postgresql on 解析屋こさめ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Oct 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yu-kosame.github.io/categories/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/postgresql/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>timing で postgresql の処理時間計測</title>
@@ -15,7 +14,7 @@
       <pubDate>Thu, 09 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/timing/</guid>
-      <description>postgres=# \timing 参考：postgresql psql 実行時間を計測 - external storage</description>
+      <description>postgres=# \timing  参考：postgresql psql 実行時間を計測 - external storage</description>
     </item>
     
     <item>
@@ -24,7 +23,7 @@
       <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/db_rename/</guid>
-      <description>ALTER DATABASE WIKIPE RENAME TO ANALYSIS;</description>
+      <description>ALTER DATABASE WIKIPE RENAME TO ANALYSIS;  </description>
     </item>
     
   </channel>

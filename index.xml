@@ -1,13 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>解析屋こさめ</title>
-    <link>https://yu-kosame.github.io/</link>
-    <description>Recent content on 解析屋こさめ</description>
+    <title>解析屋こさめ on 解析屋こさめ</title>
+    <link>https://yu-kosame.github.io/index.xml</link>
+    <description>Recent content in 解析屋こさめ on 解析屋こさめ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Jul 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yu-kosame.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Yu IMAI</title>
+      <link>https://yu-kosame.github.io/post/about/</link>
+      <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/about/</guid>
+      <description>会社員。
+仕事：GIS，空間解析
+好きな道具：QGIS，PostGIS，GRASS GIS
+興味：自然，鳥
+学歴  立正大学 地球環境科学部 環境システム学科 立正大学大学院 地球環境科学研究科 環境システム学専攻 修士課程  論文・報告  鈴木弘行・桑原和之・田久保晴孝・飯田陳也・今井優．2015．江戸川区葛西の鳥類相（2015年）．我孫子市鳥の博物館調査研究報告 21(4)．
+今井優・桑原和之・箕輪義隆・米林仲．2014．草地性鳥類のハビタット評価と保全優先度指数による保護区選定．保全生態学研究 19: 27–37．
+
+講演・講習  今井優．2017．CARTO ハンズオン．オープンデータで主題図を作ろう －地理学 x 市民活動で地域を見える化する－ 第2回．
+今井優．2016．CARTO ハンズオン．第4回 GIS Camp．
+今井優．2016．CARTOって何？CARTOでできること．オープンデータで主題図を作ろう －地理学 x 市民活動で地域を見える化する－ 第1回．
+今井優・桑原和之・箕輪義隆・米林仲．2013．草地性鳥類のハビタット評価と保全優先度指数による保護区選定．2013年11月 地域自然情報研究会．
+今井優．2012．QGIS講習会 空中写真から土地被覆の変化を調べよう♪．立正大学 地球環境科学部 環境システム学科 学生向け講習会．
+今井優．2011．湿地における草地性鳥類のハビタット評価．第88回 千葉市野鳥の会 談話会．
+今井優．2011．G I S のはなし．第88回 千葉市野鳥の会 談話会．
+
+発表  今井優・桑原和之・箕輪義隆・米林仲．2015．草地性鳥類のより高精度なハビタット評価のための経年解析．第18回自然系調査研究機関連絡会議．
+金城泉・戸田求・今井優．2014．西中国山地の山村地域を対象とした土地被覆の変遷と人口動態に関する時空間解析．2014 年度地理科学春季学術大会．
+金城泉・今井優・戸田求．2014．西中国山地における人口動態と土地被覆の変遷に関する時空間評価のGIS解析．第61回日本生態学会大会．
+桑原和之・箕輪義隆・長屋ゆみ子・佐藤達夫・今井優．2014．千葉県におけるシロチドリの繁殖状況，2013年．2013年度 モニタリングサイト1000 シギ・チドリ類調査交流会 三重．
+今井優・桑原和之・箕輪義隆．2014．千葉県におけるオオメダイチドリの飛来状況，2013年．2013年度 モニタリングサイト1000 シギ・チドリ類調査交流会 三重．</description>
+    </item>
     
     <item>
       <title>fifty tit</title>
@@ -28,21 +56,12 @@
     </item>
     
     <item>
-      <title>tiriin_ol3</title>
-      <link>https://yu-kosame.github.io/post/tiriin_ol3/</link>
-      <pubDate>Fri, 15 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://yu-kosame.github.io/post/tiriin_ol3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>新芽の頃の龍飛岬</title>
       <link>https://yu-kosame.github.io/post/tappi/</link>
       <pubDate>Sat, 02 May 2015 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/tappi/</guid>
-      <description>2015.05.02 岬 ja.name s.name note キジバト Streptopelia orientalis オオハム Gavia arctica ウミネコ Larus crassirostris トウゾクカモメ Stercorarius pomarinus 自分は見逃した ミサゴ Pandion haliaetus ノスリ Buteo buteo モズ Lanius bucephalus ハシブトガラス Corvus macrorhynchos ヤマガラ Poecile varius ヒガラ Periparus ater シジュウカラ Parus minor ヒヨドリ Hypsipetes amaurotis ウグイス Cettia diphone メジロ Zosterops japonicus ホオジロ Emberiza cioides キタオットセイ Callorhinus ursinus イルカ - マイルカ？ 海がとーってもきれい。 ホオジロと北海道 キタオットセイ 眺めてるうちに，夕日が雲に分割される 夕食の魚を獲ったミサゴ 2015.05.03 岬 ja.name s.name note キジバト Streptopelia orientalis ヒメウ Phalacrocorax pelagicus ツツドリ Cuculus optatus 赤色型 ユリカモメ Larus ridibundus +羽がV字に水面を飛ぶ ウミネコ Larus crassirostris ウトウ Cerorhinca monocerata 潜るときぱたっと羽を広げるのが見えた ハイタカ Accipiter nisus サンショウクイ Pericrocotus divaricatus ちらっと。ぴりり！ ハシブトガラス Corvus macrorhynchos ヒヨドリ Hypsipetes amaurotis ウグイス Cettia diphone メジロ Zosterops japonicus イソヒヨドリ Monticola solitarius ニュウナイスズメ Passer rutilans イカル Eophona personata ホオジロ Emberiza cioides 今朝は近くの灯台も霧の中 ヒヨドリ達の決心 あじさいロードの新芽は色とりどり 橋の下の沢に咲いているのは，オオカメノキ ヤグルマソウの花みたの初めてかもなぁ，と写真撮ったけど 図鑑と花がぜんぜん違う…！ どうやらフキの雌株が下に隠れてるらしい。 静かなところ（夜） ja.name s.name note トラツグミ Zoothera dauma 声 2015.05.04 今朝も岬は霧の中。写真は防衛省の建物だそうです。 あじさいロード ja.name s.name note トビ Milvus migrans アオゲラ Picus awokera 声：ひょー*3 ハヤブサ Falco peregrinus みゃあーおー等 カケス Garrulus glandarius 声 ヒヨドリ Hypsipetes amaurotis ウグイス Cettia diphone ヤブサメ Urosphena squameiceps 声：しししししし… エゾムシクイ Phylloscopus borealoides 声：ひーつーきー センダイムシクイ Phylloscopus coronatus ちよちよびー クロツグミ Turdus cardis ガビチョウみたいな声（本家に失礼） アカハラ Turdus chrysolaus びっくりしてた ツグミ Turdus naumanni コルリ Luscinia cyane 声 ルリビタキ Tarsiger cyanurus 声 イソヒヨドリ Monticola solitarius キビタキ Ficedula narcissina オオルリ Cyanoptila cyanomelana 声 ベニマシコ Uragus sibiricus アオジ Emberiza spodocephala 夏羽，さえずりは複雑 ニホンザル Macaca fuscata ときどき，カツラを見かけた。 秋は甘い香りの道なのかな。 道でくつろいでた子連れの群れに，一時よけてもらった。 岬 ja.name s.name note キジバト Streptopelia orientalis ミサゴ Pandion haliaetus ハヤブサ Falco peregrinus ヒヨドリを捕獲 ハシブトガラス Corvus macrorhynchos ヒヨドリ Hypsipetes amaurotis ウグイス Cettia diphone メジロ Zosterops japonicus Bombycilla sp.</description>
+      <description>2015.05.02 岬    ja.name s.name note     キジバト Streptopelia orientalis    オオハム Gavia arctica    ウミネコ Larus crassirostris    トウゾクカモメ Stercorarius pomarinus 自分は見逃した   ミサゴ Pandion haliaetus    ノスリ Buteo buteo    モズ Lanius bucephalus    ハシブトガラス Corvus macrorhynchos    ヤマガラ Poecile varius    ヒガラ Periparus ater    シジュウカラ Parus minor    ヒヨドリ Hypsipetes amaurotis    ウグイス Cettia diphone    メジロ Zosterops japonicus    ホオジロ Emberiza cioides    キタオットセイ Callorhinus ursinus    イルカ - マイルカ？</description>
     </item>
     
     <item>
@@ -51,7 +70,8 @@
       <pubDate>Sun, 26 Apr 2015 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/others/</guid>
-      <description>撮った写真を一括でレベル補正するときは，XnView の「標準化 Ex」で 黒色限度：0.50 白色限度：0.05 拡大限度：130 にしたら，ちょうどいいかも。</description>
+      <description>撮った写真を一括でレベル補正するときは，XnView の「標準化 Ex」で
+黒色限度：0.50 白色限度：0.05 拡大限度：130  にしたら，ちょうどいいかも。</description>
     </item>
     
     <item>
@@ -61,7 +81,8 @@
       
       <guid>https://yu-kosame.github.io/post/kitamoto/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://yu-kosame.github.io/pict/kawasemi_20150315.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -73,7 +94,8 @@
       <description>&lt;p&gt;&lt;img src=&#34;https://yu-kosame.github.io/pict/20150201_inokashira/P1000720.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;井の頭公園に行きました。&lt;/p&gt;
-</description>
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -82,16 +104,16 @@
       <pubDate>Fri, 02 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/kinchakuda_isanuma/</guid>
-      <description>巾着田周辺 どこにいるでしょう？ モズ♀ 伊佐沼 ヒドリガモ ユリカモメ隊長率いるコガモ隊のみなさん</description>
-    </item>
-    
-    <item>
-      <title>keyboard</title>
-      <link>https://yu-kosame.github.io/post/keyboard/</link>
-      <pubDate>Thu, 25 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://yu-kosame.github.io/post/keyboard/</guid>
-      <description>いろんな環境でのキーボード操作を統一したい。 主に，半角全角切り替えと，Ctrl について。 Mac win7 in vmware on Mac win7（Macからリモートでつなぐときがある）</description>
+      <description>巾着田周辺 どこにいるでしょう？
+
+
+
+
+モズ♀
+
+伊佐沼 
+ヒドリガモ
+ユリカモメ隊長率いるコガモ隊のみなさん</description>
     </item>
     
     <item>
@@ -109,7 +131,9 @@
       <pubDate>Thu, 25 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/remote_mac2win7home/</guid>
-      <description>Windows 7 Home Premium でリモート接続を許可できるようにする Concurrent RDP Patcher というソフト（パッチ？）を使います。 参考のサイトによると，WindowsUpdateによって，使えなくなるときがあるみたいです。 その対応をしたバージョンを参考サイトのリンクからいただきましたが，現在はリンクが切れています（2014.12.25）。 参考 orebibou.com</description>
+      <description> Windows 7 Home Premium でリモート接続を許可できるようにする Concurrent RDP Patcher というソフト（パッチ？）を使います。
+参考のサイトによると，WindowsUpdateによって，使えなくなるときがあるみたいです。 その対応をしたバージョンを参考サイトのリンクからいただきましたが，現在はリンクが切れています（2014.12.25）。
+参考  orebibou.com  </description>
     </item>
     
     <item>
@@ -118,7 +142,9 @@
       <pubDate>Mon, 22 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/ramdisk/</guid>
-      <description>ソフトのインストール SoftPerfect RAM Disk をインストールしました。 インストーラは，基本，「Next &amp;gt;」で進んでいけば大丈夫でした。 途中，KEG記憶域コントローラー をインストールするか聞かれるので，参考のサイトに習って，インストールしました。 RAMディスク作成 「RAMディスク」-&amp;gt;「RAMディスクの追加/編集」 容量（MB）: 1,024 ドライブ名 : R: ファイルシステム : NTFS バックアップの設定 tempファイルの移行 参考 bto-pc.jp/btopc-com</description>
+      <description> ソフトのインストール SoftPerfect RAM Disk をインストールしました。 インストーラは，基本，「Next &amp;gt;」で進んでいけば大丈夫でした。 途中，KEG記憶域コントローラー をインストールするか聞かれるので，参考のサイトに習って，インストールしました。
+RAMディスク作成 「RAMディスク」-&amp;gt;「RAMディスクの追加/編集」
+容量（MB）: 1,024 ドライブ名 : R: ファイルシステム : NTFS  バックアップの設定 tempファイルの移行 参考  bto-pc.jp/btopc-com  </description>
     </item>
     
     <item>
@@ -127,7 +153,7 @@
       <pubDate>Mon, 24 Nov 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/onoji/</guid>
-      <description>タマノカンアオイ シロダモ キヅタ イノモトソウ科 ヒサカキ ツワブキ ナンテン きゅるきゅるメジロ イタチシダの仲間 シロハラかアカハラの地鳴き サイハイラン サルトリイバラ センニンソウ マユミ トウカエデ コモチシダのなかま ホシダのなかま ホラシノブ ジシバリ ジュズダマ カニクサ シチカズラ キツネノマゴ スミレ？ ベニバナボロギク ゴンズイ</description>
+      <description> タマノカンアオイ シロダモ キヅタ イノモトソウ科 ヒサカキ ツワブキ ナンテン きゅるきゅるメジロ イタチシダの仲間 シロハラかアカハラの地鳴き サイハイラン サルトリイバラ センニンソウ マユミ トウカエデ コモチシダのなかま ホシダのなかま ホラシノブ ジシバリ ジュズダマ カニクサ シチカズラ キツネノマゴ スミレ？ ベニバナボロギク ゴンズイ  </description>
     </item>
     
     <item>
@@ -136,7 +162,7 @@
       <pubDate>Thu, 09 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/timing/</guid>
-      <description>postgres=# \timing 参考：postgresql psql 実行時間を計測 - external storage</description>
+      <description>postgres=# \timing  参考：postgresql psql 実行時間を計測 - external storage</description>
     </item>
     
     <item>
@@ -145,7 +171,17 @@
       <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/du/</guid>
-      <description>du -hs *** -h で適した単位にしてくれる。 -s でディレクトリ内のファイルを表示しない。</description>
+      <description>du -hs ***  -h で適した単位にしてくれる。
+-s でディレクトリ内のファイルを表示しない。</description>
+    </item>
+    
+    <item>
+      <title>mac からの ssh で接続が切れないようにする</title>
+      <link>https://yu-kosame.github.io/post/ssh_mac/</link>
+      <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/ssh_mac/</guid>
+      <description># ~/.ssh/config ServerAliveInterval 60 # 60秒に一回何かを送る  参考： ssh接続が勝手に切れちゃう場合の対処法 - すぱぶろ</description>
     </item>
     
   </channel>

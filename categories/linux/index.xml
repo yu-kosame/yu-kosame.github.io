@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on 解析屋こさめ</title>
-    <link>https://yu-kosame.github.io/categories/linux/</link>
+    <link>https://yu-kosame.github.io/categories/linux/index.xml</link>
     <description>Recent content in Linux on 解析屋こさめ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Oct 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yu-kosame.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>du でディレクトリの容量を調べる</title>
@@ -15,7 +14,8 @@
       <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/du/</guid>
-      <description>du -hs *** -h で適した単位にしてくれる。 -s でディレクトリ内のファイルを表示しない。</description>
+      <description>du -hs ***  -h で適した単位にしてくれる。
+-s でディレクトリ内のファイルを表示しない。</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/scp/</guid>
-      <description>scp -P xxxx /Users/***/Desktop/***.txt root@***.***.***.***:</description>
+      <description>scp -P xxxx /Users/***/Desktop/***.txt root@***.***.***.***:  </description>
     </item>
     
     <item>
@@ -33,7 +33,10 @@
       <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/memory/</guid>
-      <description>メモリ空き状況 free free をみて，何の用途にも使っていない物理メモリ量を確認。 vmstat -a Inact をみて，キャッシュのうち，すぐ捨てられるページを確認。 どんなプロセスが動いているか top または， ps -aux 参考 Linuxトラブルシューティング探偵団 番外編（1）：減り続けるメモリ残量！ 果たしてその原因は!? (1&amp;frasl;3) - ＠IT</description>
+      <description> メモリ空き状況 free  free をみて，何の用途にも使っていない物理メモリ量を確認。
+vmstat -a  Inact をみて，キャッシュのうち，すぐ捨てられるページを確認。
+どんなプロセスが動いているか top  または，
+ps -aux  参考  Linuxトラブルシューティング探偵団　番外編（1）：減り続けるメモリ残量！ 果たしてその原因は!? (1&amp;frasl;3) - ＠IT  </description>
     </item>
     
     <item>
@@ -42,7 +45,7 @@
       <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/mkdir/</guid>
-      <description>mkdir -p dir1/dir2 # -p オプションをつける</description>
+      <description>mkdir -p dir1/dir2 # -p オプションをつける  </description>
     </item>
     
     <item>
@@ -51,7 +54,8 @@
       <pubDate>Thu, 11 Sep 2014 00:00:00 +0000</pubDate>
       
       <guid>https://yu-kosame.github.io/post/ln/</guid>
-      <description>シンボリックリンクの作成 ln -s /home/usr/peko peko ls -l peko -&amp;gt; /home/usr/peko</description>
+      <description>シンボリックリンクの作成
+ln -s /home/usr/peko peko  ls -l peko -&amp;gt; /home/usr/peko  </description>
     </item>
     
   </channel>
