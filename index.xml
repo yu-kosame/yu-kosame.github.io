@@ -6,8 +6,17 @@
     <description>Recent content in 解析屋こさめ on 解析屋こさめ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Jul 2017 15:29:07 +0900</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>uzom.uzo</title>
+      <link>https://yu-kosame.github.io/post/uzom_uzo/</link>
+      <pubDate>Sat, 01 Jul 2017 15:29:07 +0900</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/uzom_uzo/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Yu IMAI</title>
@@ -171,15 +180,6 @@ RAMディスク作成 「RAMディスク」-&amp;gt;「RAMディスクの追加/
       <guid>https://yu-kosame.github.io/post/du/</guid>
       <description>du -hs ***  -h で適した単位にしてくれる。
 -s でディレクトリ内のファイルを表示しない。</description>
-    </item>
-    
-    <item>
-      <title>mac からの ssh で接続が切れないようにする</title>
-      <link>https://yu-kosame.github.io/post/ssh_mac/</link>
-      <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://yu-kosame.github.io/post/ssh_mac/</guid>
-      <description># ~/.ssh/config ServerAliveInterval 60 # 60秒に一回何かを送る  参考： ssh接続が勝手に切れちゃう場合の対処法 - すぱぶろ</description>
     </item>
     
   </channel>
