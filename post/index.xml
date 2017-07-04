@@ -6,8 +6,20 @@
     <description>Recent content in Posts on 解析屋こさめ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Jul 2017 15:29:07 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 04 Jul 2017 21:02:13 +0900</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>プロキシ下で VirtualBox の ゲストの Ubuntu に ssh する</title>
+      <link>https://yu-kosame.github.io/post/vbox_with_proxy/</link>
+      <pubDate>Tue, 04 Jul 2017 21:02:13 +0900</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/vbox_with_proxy/</guid>
+      <description> vbox の環境設定 Windows のネットワーク接続の設定 コンパネ -&amp;gt; ネットワークと共有センター -&amp;gt; アダプターの設定の変更
+ヴァーチャルマシンの設定 ゲストの Ubuntu での設定 ゲストOS は Ubuntu 16.04 です。
+/etc/network/interfaces source /etc/network/interfaces.d/* # The loopback network interface auto lo iface lo inet loopback # The primary network interface auto enp0s3 iface enp0s3 inet dhcp # Nat auto enp0s8 iface enp0s8 inet dhcp  プロキシの設定 export http_proxy=http://xxx.xxx.xxx.xxx:port export https_proxy=http://xxx.xxx.xxx.xxx:port export ftp_proxy=http://xxx.xxx.xxx.xxx:port  /etc/apt/apt.conf
+Acquire::http::proxy &amp;quot;http://xxx.xxx.xxx.xxx:port&amp;quot;; Acquire::https::proxy &amp;quot;http://xxx.xxx.xxx.xxx:port&amp;quot;; Acquire::ftp::proxy &amp;quot;http://xxx.xxx.xxx.xxx:port&amp;quot;;  tera term での ssh 接続 </description>
+    </item>
     
     <item>
       <title>uzom.uzo</title>
@@ -170,16 +182,6 @@ RAMディスク作成 「RAMディスク」-&amp;gt;「RAMディスクの追加/
       
       <guid>https://yu-kosame.github.io/post/timing/</guid>
       <description>postgres=# \timing  参考：postgresql psql 実行時間を計測 - external storage</description>
-    </item>
-    
-    <item>
-      <title>du でディレクトリの容量を調べる</title>
-      <link>https://yu-kosame.github.io/post/du/</link>
-      <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://yu-kosame.github.io/post/du/</guid>
-      <description>du -hs ***  -h で適した単位にしてくれる。
--s でディレクトリ内のファイルを表示しない。</description>
     </item>
     
   </channel>

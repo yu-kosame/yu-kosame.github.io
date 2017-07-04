@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>解析屋こさめ</title>
+    <link>https://yu-kosame.github.io/tags/index.xml</link>
+    <description>Recent content on 解析屋こさめ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>プロキシ下で VirtualBox の ゲストの Ubuntu に ssh する</title>
+      <link>https://yu-kosame.github.io/post/vbox_with_proxy/</link>
+      <pubDate>Tue, 04 Jul 2017 21:02:13 +0900</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/vbox_with_proxy/</guid>
+      <description> vbox の環境設定 Windows のネットワーク接続の設定 コンパネ -&amp;gt; ネットワークと共有センター -&amp;gt; アダプターの設定の変更
+ヴァーチャルマシンの設定 ゲストの Ubuntu での設定 ゲストOS は Ubuntu 16.04 です。
+/etc/network/interfaces source /etc/network/interfaces.d/* # The loopback network interface auto lo iface lo inet loopback # The primary network interface auto enp0s3 iface enp0s3 inet dhcp # Nat auto enp0s8 iface enp0s8 inet dhcp  プロキシの設定 export http_proxy=http://xxx.xxx.xxx.xxx:port export https_proxy=http://xxx.xxx.xxx.xxx:port export ftp_proxy=http://xxx.xxx.xxx.xxx:port  /etc/apt/apt.conf
+Acquire::http::proxy &amp;quot;http://xxx.xxx.xxx.xxx:port&amp;quot;; Acquire::https::proxy &amp;quot;http://xxx.xxx.xxx.xxx:port&amp;quot;; Acquire::ftp::proxy &amp;quot;http://xxx.xxx.xxx.xxx:port&amp;quot;;  tera term での ssh 接続 </description>
+    </item>
+    
+  </channel>
+</rss>
