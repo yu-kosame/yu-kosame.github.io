@@ -2,11 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Postgresql on 解析屋こさめ</title>
-    <link>https://yu-kosame.github.io/categories/postgresql/index.xml</link>
+    <link>https://yu-kosame.github.io/categories/postgresql/</link>
     <description>Recent content in Postgresql on 解析屋こさめ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/categories/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/categories/postgresql/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>timing で postgresql の処理時間計測</title>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 解析屋こさめ</title>
+    <link>https://yu-kosame.github.io/categories/</link>
+    <description>Recent content in Categories on 解析屋こさめ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/categories/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About</title>
+      <link>https://yu-kosame.github.io/categories/about/</link>
+      <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/categories/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Field</title>
+      <link>https://yu-kosame.github.io/categories/field/</link>
+      <pubDate>Sat, 02 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/categories/field/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Illust</title>
+      <link>https://yu-kosame.github.io/categories/illust/</link>
+      <pubDate>Sat, 01 Jul 2017 15:29:07 +0900</pubDate>
+      
+      <guid>https://yu-kosame.github.io/categories/illust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://yu-kosame.github.io/categories/linux/</link>
+      <pubDate>Tue, 04 Jul 2017 21:02:13 +0900</pubDate>
+      
+      <guid>https://yu-kosame.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Others</title>
+      <link>https://yu-kosame.github.io/categories/others/</link>
+      <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/categories/others/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Postgresql</title>
+      <link>https://yu-kosame.github.io/categories/postgresql/</link>
+      <pubDate>Thu, 09 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/categories/postgresql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Server</title>
+      <link>https://yu-kosame.github.io/categories/server/</link>
+      <pubDate>Tue, 30 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/categories/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://yu-kosame.github.io/categories/windows/</link>
+      <pubDate>Wed, 04 Apr 2018 16:27:09 +0900</pubDate>
+      
+      <guid>https://yu-kosame.github.io/categories/windows/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

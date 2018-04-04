@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://yu-kosame.github.io/post/del_dnld/</loc>
+    <lastmod>2018-04-04T16:27:09+09:00</lastmod>
+  </url>
   
   <url>
     <loc>https://yu-kosame.github.io/post/vbox_with_proxy/</loc>
@@ -49,11 +55,6 @@
   <url>
     <loc>https://yu-kosame.github.io/post/kinchakuda_isanuma/</loc>
     <lastmod>2015-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://yu-kosame.github.io/post/postgresql_conf/</loc>
-    <lastmod>2014-12-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -152,10 +153,6 @@
   </url>
   
   <url>
-    <loc>https://yu-kosame.github.io/about/</loc>
-  </url>
-  
-  <url>
     <loc>https://yu-kosame.github.io/categories/about/</loc>
     <lastmod>2017-03-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -163,6 +160,7 @@
   
   <url>
     <loc>https://yu-kosame.github.io/categories/</loc>
+    <lastmod>2017-03-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -198,7 +196,7 @@
   
   <url>
     <loc>https://yu-kosame.github.io/post/</loc>
-    <lastmod>2017-07-04T21:02:13+09:00</lastmod>
+    <lastmod>2018-04-04T16:27:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -209,20 +207,19 @@
   </url>
   
   <url>
-    <loc>https://yu-kosame.github.io/categories/win7/</loc>
-    <lastmod>2014-12-25T00:00:00+00:00</lastmod>
+    <loc>https://yu-kosame.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://yu-kosame.github.io/categories/windows/</loc>
-    <lastmod>2017-07-04T21:02:13+09:00</lastmod>
+    <lastmod>2018-04-04T16:27:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://yu-kosame.github.io/</loc>
-    <lastmod>2017-07-04T21:02:13+09:00</lastmod>
+    <lastmod>2018-04-04T16:27:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   

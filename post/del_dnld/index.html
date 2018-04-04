@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="generator" content="Hugo 0.38" />
     <link rel="shortcut icon" href="/images/favicon.ico">
-    <link href="https://yu-kosame.github.io/categories/field/index.xml" rel="alternate" type="application/rss+xml" title="解析屋こさめ" />
+    <link href="https://yu-kosame.github.io/index.xml" rel="alternate" type="application/rss+xml" title="解析屋こさめ" />
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     
@@ -16,7 +16,7 @@
     <script>hljs.initHighlightingOnLoad();</script>
     
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <title>Field | 解析屋こさめ</title>
+    <title>ダウンロードフォルダ内自動削除 | 解析屋こさめ</title>
   </head>
   <body>
     <div id="wrap">
@@ -29,102 +29,84 @@
       <div class="container">
         <div id="main">
 
-<div id="article-list">
-  
-  <div id="articles-list-header">
-    <h1>Archive: <span id="archive-value">Field</span></h1>
+<div class="article">
+  <header>
+    <div class="article-header">
+      <h1>ダウンロードフォルダ内自動削除</h1>
+      <div class="article-meta">
+        <span class="posttime">2018/04/04</span>
+        
+
+      </div>
+    </div>
+    
+<div id="share-buttons">
+  <ul>
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+
+  </header>
+  <div class="content">
+    <p>Windows のダウンロードフォルダは、不要になったファイルや容量の大きなファイルがたまりがちです。<br />
+そこで、起動時に5日より前にダウンロードしたファイルを自動削除するバッチファイル del_dnld.bat を用意しました。</p>
+
+<p><a href="https://aitoyozn.net/2015/07/post-653/">こちらの記事</a> を参考にしました。</p>
+
+<pre><code class="language-bash">@echo off
+forfiles /p &quot;%USERPROFILE%\Downloads&quot; /D -5 /c &quot;cmd /c del /F /S /Q @file&quot;
+forfiles /p &quot;%USERPROFILE%\Downloads&quot; /D -5 /c &quot;cmd /c IF @isdir==TRUE rmdir /S /Q @file&quot;
+</code></pre>
+
+<p>参考元のスクリプトだとフォルダは削除対象外だったので、フォルダも削除されるよう追記してみました。</p>
+
+<p>このバッチファイルが起動時に実行されるよう、スタートアップに登録します。<br />
+Windows 10 のスタートアップフォルダは以下なので、del_dnld.bat をここに入れます。</p>
+
+<pre><code class="language-text">C:\Users\&lt;ユーザ名&gt;\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+</code></pre>
+
+<p>これで、ダウンロードフォルダはいつでもすっきりですね🌸</p>
+
   </div>
-  
-  
-  
-  <div class="article">
-    <h2><a href="https://yu-kosame.github.io/post/tappi/">新芽の頃の龍飛岬</a></h2>
-    <div class="article-meta">
-      <span class="posttime">2015/05/02</span>
+  <footer>
+    <div class="article-footer">
       
 
-    </div>
-  </div>
-  
-  <div class="article">
-    <h2><a href="https://yu-kosame.github.io/post/kitamoto/">北鴻巣 -&gt; 北本</a></h2>
-    <div class="article-meta">
-      <span class="posttime">2015/03/15</span>
       
+      
+<div id="share-buttons">
+  <ul>
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
 
-    </div>
-  </div>
-  
-  <div class="article">
-    <h2><a href="https://yu-kosame.github.io/post/inokashira/">井の頭公園</a></h2>
-    <div class="article-meta">
-      <span class="posttime">2015/02/01</span>
-      
 
-    </div>
-  </div>
-  
-  <div class="article">
-    <h2><a href="https://yu-kosame.github.io/post/kinchakuda_isanuma/">初詣後の鳥見，巾着田・伊佐沼</a></h2>
-    <div class="article-meta">
-      <span class="posttime">2015/01/02</span>
-      
-
-    </div>
-  </div>
-  
-  <div class="article">
-    <h2><a href="https://yu-kosame.github.io/post/onoji/">the里山 小野路</a></h2>
-    <div class="article-meta">
-      <span class="posttime">2014/11/24</span>
-      
-
-    </div>
-  </div>
-  
-  <div class="article">
-    <h2><a href="https://yu-kosame.github.io/post/echigoyuzawa/">秋の越後湯沢</a></h2>
-    <div class="article-meta">
-      <span class="posttime">2014/10/04</span>
-      
-
-    </div>
-  </div>
-  
-  <div class="article">
-    <h2><a href="https://yu-kosame.github.io/post/yatsuhigata/">谷津干潟</a></h2>
-    <div class="article-meta">
-      <span class="posttime">2014/09/21</span>
-      
-
-    </div>
-  </div>
-  
-  <div class="article">
-    <h2><a href="https://yu-kosame.github.io/post/mitosan/">涼しい日の三頭山</a></h2>
-    <div class="article-meta">
-      <span class="posttime">2014/09/13</span>
-      
-
-    </div>
-  </div>
-  
-  <div class="article">
-    <h2><a href="https://yu-kosame.github.io/post/2014-09-10-mitakesan/">暑い日の御岳山</a></h2>
-    <div class="article-meta">
-      <span class="posttime">2014/07/16</span>
-      
-
-    </div>
-  </div>
-  
-  <nav>
-    <div id="pager">
       
       
-
+      <div id="pagenavigation-next-prev">
+        
+        <div id="pagenavigation-next">
+          <span class="pagenav-label">Previous</span>
+          <a href="https://yu-kosame.github.io/post/vbox_with_proxy/">プロキシ下で VirtualBox の ゲストの Ubuntu に ssh する</a>
+        </div>
+        
+        
+      </div>
+      
     </div>
-  </nav>
+  </footer>
 </div>
         </div>
         <div class="sidebar">
@@ -196,7 +178,7 @@
       <span>RSS</span>
     </div>
     <div id="rss">
-      <a href="https://yu-kosame.github.io/categories/field/index.xml" type="application/rss+xml" target="_blank">
+      <a href="https://yu-kosame.github.io/index.xml" type="application/rss+xml" target="_blank">
         <i class="fa fa-rss-square fa-2x" aria-hidden="true"></i>
       </a>
     </div>

@@ -2,11 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Windows on 解析屋こさめ</title>
-    <link>https://yu-kosame.github.io/categories/windows/index.xml</link>
+    <link>https://yu-kosame.github.io/categories/windows/</link>
     <description>Recent content in Windows on 解析屋こさめ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Apr 2018 16:27:09 +0900</lastBuildDate>
+    <atom:link href="/categories/windows/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ダウンロードフォルダ内自動削除</title>
+      <link>https://yu-kosame.github.io/post/del_dnld/</link>
+      <pubDate>Wed, 04 Apr 2018 16:27:09 +0900</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/del_dnld/</guid>
+      <description>Windows のダウンロードフォルダは、不要になったファイルや容量の大きなファイルがたまりがちです。
+そこで、起動時に5日より前にダウンロードしたファイルを自動削除するバッチファイル del_dnld.bat を用意しました。
+こちらの記事 を参考にしました。
+@echo off forfiles /p &amp;quot;%USERPROFILE%\Downloads&amp;quot; /D -5 /c &amp;quot;cmd /c del /F /S /Q @file&amp;quot; forfiles /p &amp;quot;%USERPROFILE%\Downloads&amp;quot; /D -5 /c &amp;quot;cmd /c IF @isdir==TRUE rmdir /S /Q @file&amp;quot;  参考元のスクリプトだとフォルダは削除対象外だったので、フォルダも削除されるよう追記してみました。
+このバッチファイルが起動時に実行されるよう、スタートアップに登録します。
+Windows 10 のスタートアップフォルダは以下なので、del_dnld.bat をここに入れます。
+C:\Users\&amp;lt;ユーザ名&amp;gt;\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup  これで、ダウンロードフォルダはいつでもすっきりですね🌸</description>
+    </item>
     
     <item>
       <title>プロキシ下で VirtualBox の ゲストの Ubuntu に ssh する</title>
@@ -17,6 +33,28 @@
       <description> vbox の環境設定 Windows のネットワーク接続の設定 コンパネ -&amp;gt; ネットワークと共有センター -&amp;gt; アダプターの設定の変更
 ヴァーチャルマシンの設定 ゲストの Ubuntu での設定 ゲストOS は Ubuntu 16.04 です。
 /etc/network/interfaces source /etc/network/interfaces.d/* # The loopback network interface auto lo iface lo inet loopback # The primary network interface auto enp0s3 iface enp0s3 inet dhcp # Nat auto enp0s8 iface enp0s8 inet dhcp  プロキシの設定 bash export http_proxy=http://xxx.xxx.xxx.xxx:port export https_proxy=http://xxx.xxx.xxx.xxx:port export ftp_proxy=http://xxx.xxx.xxx.xxx:port  /etc/apt/apt.conf Acquire::http::proxy &amp;quot;http://xxx.xxx.xxx.xxx:port&amp;quot;; Acquire::https::proxy &amp;quot;http://xxx.xxx.xxx.xxx:port&amp;quot;; Acquire::ftp::proxy &amp;quot;http://xxx.xxx.xxx.xxx:port&amp;quot;;  tera term での ssh 接続 </description>
+    </item>
+    
+    <item>
+      <title>remote_mac2win7home</title>
+      <link>https://yu-kosame.github.io/post/remote_mac2win7home/</link>
+      <pubDate>Thu, 25 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/remote_mac2win7home/</guid>
+      <description> Windows 7 Home Premium でリモート接続を許可できるようにする Concurrent RDP Patcher というソフト（パッチ？）を使います。
+参考のサイトによると，WindowsUpdateによって，使えなくなるときがあるみたいです。 その対応をしたバージョンを参考サイトのリンクからいただきましたが，現在はリンクが切れています（2014.12.25）。
+参考  orebibou.com  </description>
+    </item>
+    
+    <item>
+      <title>Ramdisk</title>
+      <link>https://yu-kosame.github.io/post/ramdisk/</link>
+      <pubDate>Mon, 22 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/ramdisk/</guid>
+      <description> ソフトのインストール SoftPerfect RAM Disk をインストールしました。 インストーラは，基本，「Next &amp;gt;」で進んでいけば大丈夫でした。 途中，KEG記憶域コントローラー をインストールするか聞かれるので，参考のサイトに習って，インストールしました。
+RAMディスク作成 「RAMディスク」-&amp;gt;「RAMディスクの追加/編集」
+容量（MB）: 1,024 ドライブ名 : R: ファイルシステム : NTFS  バックアップの設定 tempファイルの移行 参考  bto-pc.jp/btopc-com  </description>
     </item>
     
   </channel>
