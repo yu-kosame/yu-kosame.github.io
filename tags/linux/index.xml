@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on 解析屋こさめ</title>
+    <link>https://yu-kosame.github.io/tags/linux/</link>
+    <description>Recent content in Linux on 解析屋こさめ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/linux/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>pix2pix による土地被覆分類 試行記録</title>
+      <link>https://yu-kosame.github.io/post/tochibunrui/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/tochibunrui/</guid>
+      <description>（編集中）
+GPU 搭載マシンを購入 NVIDIA の GPU（グラフィックボード）搭載のものを選びます。
+汎用のものより，ゲーミングマシンの用の GPU のほうがお手頃でした（Geforce など）。
+部屋のスペースを考えて，コンパクトな Dospara の GALLERIA SZ にして，GPU は GeForce GTX1080Ti のものにしました（今はもっとハイスペックのものがあるかも）。
+OS 別の環境構築：Windows こちらの記事を参考にしました。
+pix2pix を動かしてみる
+OS 別の環境構築：Ubuntu デュアルブートにします。
+Windows と違って，nvidia-docker(-2) を使えるのが利点です。
+USB メモリに Ubuntu のインストーラを作成 Ubuntu の公式ページから，iso をダウンロードし，UNetbootin で USBメモリに Ubuntu のインストーラを焼きました。
+2年くらい前だったので，16.04 にしましたが，いまだったら 18.04 にします。LTR にしたほうが何かといいです。
+Windows のパーティションを小さくする Windows が入っている SSD に対し，Windows のディスクの管理でボリュームの縮小をして，Win と Ubuntu 半分ずつにしました。
+しかし，一つのドライブに複数の OS を入れるのはおすすめされないようです。
+私もパーティションテーブルがおかしくなり，grub rescue とだけ表示されて OS が見つからなくなる事態に何度かなりました。
+差す場所に余裕があれば，新たに SSD を買ってそちらに Ubuntu に入れるほうがいいようです。</description>
+    </item>
+    
+  </channel>
+</rss>
