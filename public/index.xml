@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>解析屋こさめ on 解析屋こさめ</title>
+    <link>https://yu-kosame.github.io/</link>
+    <description>Recent content in 解析屋こさめ on 解析屋こさめ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Yu IMAI</title>
+      <link>https://yu-kosame.github.io/post/about/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/about/</guid>
+      <description>（編集中）
+会社員。
+仕事：GIS，空間解析
+好きな道具：QGIS，PostGIS 興味：自然，鳥
+経歴  立正大学 地球環境科学部 環境システム学科 立正大学大学院 地球環境科学研究科 環境システム学専攻 修士課程 株式会社プレック研究所 Pacific Spatial Solutions, LLC 朝日航洋株式会社  論文・報告  今井優．2018．深層学習による空中写真を対象とした土地被覆分類の試み．国際 ICT 利用研究学会研究会研究論文誌 第1巻 第 1·2 合併号: 16．
+鈴木弘行・桑原和之・田久保晴孝・飯田陳也・今井優．2015．江戸川区葛西の鳥類相（2015年）．我孫子市鳥の博物館調査研究報告 21(4)．
+今井優・桑原和之・箕輪義隆・米林仲．2014．草地性鳥類のハビタット評価と保全優先度指数による保護区選定．保全生態学研究 19: 27–37．
+
+講演・講習  今井優．2019．深層学習による空中写真を対象とした土地被覆分類の試み．東京農業大学 広域環境情報学 第13回．
+今井優．2019．深層学習による空中写真を対象とした土地被覆分類の試み．地域自然情報ネットワーク 2019年4月地域自然情報研究会．（お知らせ，報告）
+今井優．2016．CARTO ハンズオン．オープンデータで主題図を作ろう －地理学 x 市民活動で地域を見える化する－ 第2回．
+今井優．2016．CARTO ハンズオン．第4回 GIS Camp．
+今井優．2016．CARTOって何？CARTOでできること．オープンデータで主題図を作ろう －地理学 x 市民活動で地域を見える化する－ 第1回．
+今井優・桑原和之・箕輪義隆・米林仲．2013．草地性鳥類のハビタット評価と保全優先度指数による保護区選定．2013年11月 地域自然情報研究会．
+今井優．2012．QGIS講習会 空中写真から土地被覆の変化を調べよう♪．立正大学 地球環境科学部 環境システム学科 学生向け講習会．
+今井優．2011．湿地における草地性鳥類のハビタット評価．第88回 千葉市野鳥の会 談話会．</description>
+    </item>
+    
+    <item>
+      <title>pix2pix による土地被覆分類 試行記録</title>
+      <link>https://yu-kosame.github.io/post/tochibunrui/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/tochibunrui/</guid>
+      <description>（編集中）
+GPU 搭載マシンを購入 NVIDIA の GPU（グラフィックボード）搭載のものを選びます。
+汎用のものより，ゲーミングマシンの用の GPU のほうがお手頃でした（Geforce など）。
+部屋のスペースを考えて，コンパクトな Dospara の GALLERIA SZ にして，GPU は GeForce GTX1080Ti のものにしました（今はもっとハイスペックのものがあるかも）。
+OS 別の環境構築：Windows こちらの記事を参考にしました。
+pix2pix を動かしてみる
+OS 別の環境構築：Ubuntu デュアルブートにします。
+Windows と違って，nvidia-docker(-2) を使えるのが利点です。
+USB メモリに Ubuntu のインストーラを作成 Ubuntu の公式ページから，iso をダウンロードし，UNetbootin で USBメモリに Ubuntu のインストーラを焼きました。
+2年くらい前だったので，16.04 にしましたが，いまだったら 18.04 にします。LTR にしたほうが何かといいです。
+Windows のパーティションを小さくする Windows が入っている SSD に対し，Windows のディスクの管理でボリュームの縮小をして，Win と Ubuntu 半分ずつにしました。
+しかし，一つのドライブに複数の OS を入れるのはおすすめされないようです。
+私もパーティションテーブルがおかしくなり，grub rescue とだけ表示されて OS が見つからなくなる事態に何度かなりました。
+差す場所に余裕があれば，新たに SSD を買ってそちらに Ubuntu に入れるほうがいいようです。</description>
+    </item>
+    
+    <item>
+      <title>ダウンロードフォルダ内自動削除</title>
+      <link>https://yu-kosame.github.io/post/del_dnld/</link>
+      <pubDate>Wed, 04 Apr 2018 16:27:09 +0900</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/del_dnld/</guid>
+      <description>Windows のダウンロードフォルダは、不要になったファイルや容量の大きなファイルがたまりがちです。
+そこで、起動時に5日より前にダウンロードしたファイルを自動削除するバッチファイル del_dnld.bat を用意しました。
+こちらの記事 を参考にしました。
+@echo off forfiles /p &amp;quot;%USERPROFILE%\Downloads&amp;quot; /D -5 /c &amp;quot;cmd /c del /F /S /Q @file&amp;quot; forfiles /p &amp;quot;%USERPROFILE%\Downloads&amp;quot; /D -5 /c &amp;quot;cmd /c IF @isdir==TRUE rmdir /S /Q @file&amp;quot;  参考元のスクリプトだとフォルダは削除対象外だったので、フォルダも削除されるよう追記してみました。
+このバッチファイルが起動時に実行されるよう、スタートアップに登録します。
+Windows 10 のスタートアップフォルダは以下なので、del_dnld.bat をここに入れます。
+C:\Users\&amp;lt;ユーザ名&amp;gt;\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup  これで、ダウンロードフォルダはいつでもすっきりですね🌸</description>
+    </item>
+    
+    <item>
+      <title>プロキシ下で VirtualBox の ゲストの Ubuntu に ssh する</title>
+      <link>https://yu-kosame.github.io/post/vbox_with_proxy/</link>
+      <pubDate>Tue, 04 Jul 2017 21:02:13 +0900</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/vbox_with_proxy/</guid>
+      <description> vbox の環境設定 Windows のネットワーク接続の設定 コンパネ -&amp;gt; ネットワークと共有センター -&amp;gt; アダプターの設定の変更
+ヴァーチャルマシンの設定 ゲストの Ubuntu での設定 ゲストOS は Ubuntu 16.04 です。
+/etc/network/interfaces source /etc/network/interfaces.d/* # The loopback network interface auto lo iface lo inet loopback # The primary network interface auto enp0s3 iface enp0s3 inet dhcp # Nat auto enp0s8 iface enp0s8 inet dhcp  プロキシの設定 bash export http_proxy=http://xxx.xxx.xxx.xxx:port export https_proxy=http://xxx.xxx.xxx.xxx:port export ftp_proxy=http://xxx.xxx.xxx.xxx:port  /etc/apt/apt.conf Acquire::http::proxy &amp;quot;http://xxx.xxx.xxx.xxx:port&amp;quot;; Acquire::https::proxy &amp;quot;http://xxx.xxx.xxx.xxx:port&amp;quot;; Acquire::ftp::proxy &amp;quot;http://xxx.xxx.xxx.xxx:port&amp;quot;;  tera term での ssh 接続 </description>
+    </item>
+    
+    <item>
+      <title>uzom.uzo</title>
+      <link>https://yu-kosame.github.io/post/uzom_uzo/</link>
+      <pubDate>Sat, 01 Jul 2017 15:29:07 +0900</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/uzom_uzo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fifty tit</title>
+      <link>https://yu-kosame.github.io/post/fifty_tit/</link>
+      <pubDate>Tue, 12 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/fifty_tit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hello world</title>
+      <link>https://yu-kosame.github.io/post/hello-world/</link>
+      <pubDate>Sun, 10 Jul 2016 22:14:17 +0900</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/hello-world/</guid>
+      <description>hugo で webサイト再構築。またね、clotal。</description>
+    </item>
+    
+    <item>
+      <title>新芽の頃の龍飛岬</title>
+      <link>https://yu-kosame.github.io/post/tappi/</link>
+      <pubDate>Sat, 02 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/tappi/</guid>
+      <description>2015.05.02 岬    ja.name s.name note     キジバト Streptopelia orientalis    オオハム Gavia arctica    ウミネコ Larus crassirostris    トウゾクカモメ Stercorarius pomarinus 自分は見逃した   ミサゴ Pandion haliaetus    ノスリ Buteo buteo    モズ Lanius bucephalus    ハシブトガラス Corvus macrorhynchos    ヤマガラ Poecile varius    ヒガラ Periparus ater    シジュウカラ Parus minor    ヒヨドリ Hypsipetes amaurotis    ウグイス Cettia diphone    メジロ Zosterops japonicus    ホオジロ Emberiza cioides    キタオットセイ Callorhinus ursinus    イルカ - マイルカ？</description>
+    </item>
+    
+    <item>
+      <title>写真のレベル補正</title>
+      <link>https://yu-kosame.github.io/post/others/</link>
+      <pubDate>Sun, 26 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/others/</guid>
+      <description>撮った写真を一括でレベル補正するときは，XnView の「標準化 Ex」で
+黒色限度：0.50 白色限度：0.05 拡大限度：130  にしたら，ちょうどいいかも。</description>
+    </item>
+    
+    <item>
+      <title>北鴻巣 -&gt; 北本</title>
+      <link>https://yu-kosame.github.io/post/kitamoto/</link>
+      <pubDate>Sun, 15 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/kitamoto/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://yu-kosame.github.io/pict/kawasemi_20150315.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>井の頭公園</title>
+      <link>https://yu-kosame.github.io/post/inokashira/</link>
+      <pubDate>Sun, 01 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/inokashira/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://yu-kosame.github.io/pict/20150201_inokashira/P1000720.JPG&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;井の頭公園に行きました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>初詣後の鳥見，巾着田・伊佐沼</title>
+      <link>https://yu-kosame.github.io/post/kinchakuda_isanuma/</link>
+      <pubDate>Fri, 02 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/kinchakuda_isanuma/</guid>
+      <description>巾着田周辺 どこにいるでしょう？
+
+
+
+
+モズ♀
+
+伊佐沼 
+ヒドリガモ
+ユリカモメ隊長率いるコガモ隊のみなさん</description>
+    </item>
+    
+    <item>
+      <title>remote_mac2win7home</title>
+      <link>https://yu-kosame.github.io/post/remote_mac2win7home/</link>
+      <pubDate>Thu, 25 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/remote_mac2win7home/</guid>
+      <description> Windows 7 Home Premium でリモート接続を許可できるようにする Concurrent RDP Patcher というソフト（パッチ？）を使います。
+参考のサイトによると，WindowsUpdateによって，使えなくなるときがあるみたいです。 その対応をしたバージョンを参考サイトのリンクからいただきましたが，現在はリンクが切れています（2014.12.25）。
+参考  orebibou.com  </description>
+    </item>
+    
+    <item>
+      <title>Ramdisk</title>
+      <link>https://yu-kosame.github.io/post/ramdisk/</link>
+      <pubDate>Mon, 22 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/ramdisk/</guid>
+      <description> ソフトのインストール SoftPerfect RAM Disk をインストールしました。 インストーラは，基本，「Next &amp;gt;」で進んでいけば大丈夫でした。 途中，KEG記憶域コントローラー をインストールするか聞かれるので，参考のサイトに習って，インストールしました。
+RAMディスク作成 「RAMディスク」-&amp;gt;「RAMディスクの追加/編集」
+容量（MB）: 1,024 ドライブ名 : R: ファイルシステム : NTFS  バックアップの設定 tempファイルの移行 参考  bto-pc.jp/btopc-com  </description>
+    </item>
+    
+    <item>
+      <title>the里山 小野路</title>
+      <link>https://yu-kosame.github.io/post/onoji/</link>
+      <pubDate>Mon, 24 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/onoji/</guid>
+      <description> タマノカンアオイ シロダモ キヅタ イノモトソウ科 ヒサカキ ツワブキ ナンテン きゅるきゅるメジロ イタチシダの仲間 シロハラかアカハラの地鳴き サイハイラン サルトリイバラ センニンソウ マユミ トウカエデ コモチシダのなかま ホシダのなかま ホラシノブ ジシバリ ジュズダマ カニクサ シチカズラ キツネノマゴ スミレ？ ベニバナボロギク ゴンズイ  </description>
+    </item>
+    
+  </channel>
+</rss>

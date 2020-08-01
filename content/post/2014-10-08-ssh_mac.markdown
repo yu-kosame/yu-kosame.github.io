@@ -1,0 +1,13 @@
+---
+title: "mac からの ssh で接続が切れないようにする"
+date: "2014-10-08"
+categories: others
+slug: ssh_mac
+---
+```bash
+# ~/.ssh/config
+ServerAliveInterval 60  # 60秒に一回何かを送る
+```
+
+参考：
+[ssh接続が勝手に切れちゃう場合の対処法 - すぱぶろ](http://superbrothers.hatenablog.com/entry/20090825/1251211696)

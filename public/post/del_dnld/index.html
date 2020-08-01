@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.38.2" />
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link href="https://yu-kosame.github.io/index.xml" rel="alternate" type="application/rss+xml" title="解析屋こさめ" />
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+    
+    <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
+    <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>ダウンロードフォルダ内自動削除 | 解析屋こさめ</title>
+  </head>
+  <body>
+    <div id="wrap">
+      
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-46740427-3', 'auto');
+ga('send', 'pageview');
+</script>
+
+      <header class="site-header">
+        <div class="site-header-left">
+          <a class="site-header-title" href="https://yu-kosame.github.io/">解析屋こさめ</a>
+        </div>
+      </header>
+      <div class="container">
+        <div id="main">
+
+<div class="article">
+  <header>
+    <div class="article-header">
+      <h1>ダウンロードフォルダ内自動削除</h1>
+      <div class="article-meta">
+        <span class="posttime">2018/04/04</span>
+        
+
+      </div>
+    </div>
+    
+<div id="share-buttons">
+  <ul>
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+
+  </header>
+  <div class="content">
+    <p>Windows のダウンロードフォルダは、不要になったファイルや容量の大きなファイルがたまりがちです。<br />
+そこで、起動時に5日より前にダウンロードしたファイルを自動削除するバッチファイル del_dnld.bat を用意しました。</p>
+
+<p><a href="https://aitoyozn.net/2015/07/post-653/">こちらの記事</a> を参考にしました。</p>
+
+<pre><code class="language-bash">@echo off
+forfiles /p &quot;%USERPROFILE%\Downloads&quot; /D -5 /c &quot;cmd /c del /F /S /Q @file&quot;
+forfiles /p &quot;%USERPROFILE%\Downloads&quot; /D -5 /c &quot;cmd /c IF @isdir==TRUE rmdir /S /Q @file&quot;
+</code></pre>
+
+<p>参考元のスクリプトだとフォルダは削除対象外だったので、フォルダも削除されるよう追記してみました。</p>
+
+<p>このバッチファイルが起動時に実行されるよう、スタートアップに登録します。<br />
+Windows 10 のスタートアップフォルダは以下なので、del_dnld.bat をここに入れます。</p>
+
+<pre><code class="language-text">C:\Users\&lt;ユーザ名&gt;\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+</code></pre>
+
+<p>これで、ダウンロードフォルダはいつでもすっきりですね🌸</p>
+
+  </div>
+  <footer>
+    <div class="article-footer">
+      
+
+      
+      
+<div id="share-buttons">
+  <ul>
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+
+      
+      
+      <div id="pagenavigation-next-prev">
+        
+        <div id="pagenavigation-next">
+          <span class="pagenav-label">Previous</span>
+          <a href="https://yu-kosame.github.io/post/vbox_with_proxy/">プロキシ下で VirtualBox の ゲストの Ubuntu に ssh する</a>
+        </div>
+        
+        
+        <div id="pagenavigation-prev">
+          <span class="pagenav-label">Next</span>
+          <a href="https://yu-kosame.github.io/post/tochibunrui/">pix2pix による土地被覆分類 試行記録</a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </footer>
+</div>
+        </div>
+        <div class="sidebar">
+  
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>Author</span>
+    </div>
+    <div id="author">
+      <span>yu.kosame</span>
+      <div>
+        
+        <a href="https://twitter.com/spatial_news"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+        
+        
+        <a href="https://github.com/yu-kosame"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>Categories</span>
+    </div>
+    <div class="categories">
+      <ul>
+        
+        <li>
+          <a href="/categories/about"><span></span>about (1)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/field"><span></span>field (9)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/illust"><span></span>illust (2)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/linux"><span></span>linux (6)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/others"><span></span>others (3)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/postgresql"><span></span>postgresql (2)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/server"><span></span>server (1)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/study"><span></span>study (1)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/windows"><span></span>windows (4)</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>RSS</span>
+    </div>
+    <div id="rss">
+      <a href="https://yu-kosame.github.io/index.xml" type="application/rss+xml" target="_blank">
+        <i class="fa fa-rss-square fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <footer>
+        <div id="site-footer-wrap">
+          <div id="site-footer">
+            <span>Powered by <a href="https://gohugo.io/">Hugo</a>.</span>
+            <span>
+              
+              Copyright (c) 2020, <a href="https://yu-kosame.github.io/">解析屋こさめ</a>
+              
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+

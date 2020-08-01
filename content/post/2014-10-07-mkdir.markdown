@@ -1,0 +1,9 @@
+---
+title: "再帰的 mkdir"
+date: "2014-10-07"
+categories: linux
+slug: mkdir
+---
+```bash
+mkdir -p dir1/dir2  # -p オプションをつける
+```

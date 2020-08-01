@@ -1,0 +1,10 @@
+---
+title: "scp"
+date: "2014-10-08"
+categories: linux
+slug: scp
+---
+```bash
+scp -P xxxx /Users/***/Desktop/***.txt root@***.***.***.***:
+```
+

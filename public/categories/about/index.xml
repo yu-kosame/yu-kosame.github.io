@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on 解析屋こさめ</title>
+    <link>https://yu-kosame.github.io/categories/about/</link>
+    <description>Recent content in About on 解析屋こさめ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/categories/about/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Yu IMAI</title>
+      <link>https://yu-kosame.github.io/post/about/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://yu-kosame.github.io/post/about/</guid>
+      <description>（編集中）
+会社員。
+仕事：GIS，空間解析
+好きな道具：QGIS，PostGIS 興味：自然，鳥
+経歴  立正大学 地球環境科学部 環境システム学科 立正大学大学院 地球環境科学研究科 環境システム学専攻 修士課程 株式会社プレック研究所 Pacific Spatial Solutions, LLC 朝日航洋株式会社  論文・報告  今井優．2018．深層学習による空中写真を対象とした土地被覆分類の試み．国際 ICT 利用研究学会研究会研究論文誌 第1巻 第 1·2 合併号: 16．
+鈴木弘行・桑原和之・田久保晴孝・飯田陳也・今井優．2015．江戸川区葛西の鳥類相（2015年）．我孫子市鳥の博物館調査研究報告 21(4)．
+今井優・桑原和之・箕輪義隆・米林仲．2014．草地性鳥類のハビタット評価と保全優先度指数による保護区選定．保全生態学研究 19: 27–37．
+
+講演・講習  今井優．2019．深層学習による空中写真を対象とした土地被覆分類の試み．東京農業大学 広域環境情報学 第13回．
+今井優．2019．深層学習による空中写真を対象とした土地被覆分類の試み．地域自然情報ネットワーク 2019年4月地域自然情報研究会．（お知らせ，報告）
+今井優．2016．CARTO ハンズオン．オープンデータで主題図を作ろう －地理学 x 市民活動で地域を見える化する－ 第2回．
+今井優．2016．CARTO ハンズオン．第4回 GIS Camp．
+今井優．2016．CARTOって何？CARTOでできること．オープンデータで主題図を作ろう －地理学 x 市民活動で地域を見える化する－ 第1回．
+今井優・桑原和之・箕輪義隆・米林仲．2013．草地性鳥類のハビタット評価と保全優先度指数による保護区選定．2013年11月 地域自然情報研究会．
+今井優．2012．QGIS講習会 空中写真から土地被覆の変化を調べよう♪．立正大学 地球環境科学部 環境システム学科 学生向け講習会．
+今井優．2011．湿地における草地性鳥類のハビタット評価．第88回 千葉市野鳥の会 談話会．</description>
+    </item>
+    
+  </channel>
+</rss>

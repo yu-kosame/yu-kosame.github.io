@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="Hugo 0.38.2" />
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link href="https://yu-kosame.github.io/index.xml" rel="alternate" type="application/rss+xml" title="解析屋こさめ" />
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    
+    <script src="https://apis.google.com/js/platform.js" async defer>{lang: 'ja'}</script>
+    
+    <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
+    <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>OpenShift にさわってみた | 解析屋こさめ</title>
+  </head>
+  <body>
+    <div id="wrap">
+      
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-46740427-3', 'auto');
+ga('send', 'pageview');
+</script>
+
+      <header class="site-header">
+        <div class="site-header-left">
+          <a class="site-header-title" href="https://yu-kosame.github.io/">解析屋こさめ</a>
+        </div>
+      </header>
+      <div class="container">
+        <div id="main">
+
+<div class="article">
+  <header>
+    <div class="article-header">
+      <h1>OpenShift にさわってみた</h1>
+      <div class="article-meta">
+        <span class="posttime">2014/10/01</span>
+        
+
+      </div>
+    </div>
+    
+<div id="share-buttons">
+  <ul>
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+
+  </header>
+  <div class="content">
+    <p></p>
+
+<h2 id="アカウント登録">アカウント登録</h2>
+
+<p>OpenShift online に登録しました。<br />
+その過程で，メールの URL から認証するところでなぜかエラーになりましたが，次の日アクセスするとうまくできました。</p>
+
+<h2 id="アプリ登録">アプリ登録</h2>
+
+<p>Django を選択し，その後いろいろ設定します。</p>
+
+<pre><code>Public URL  : [appname]-[domainname].rhcloud.com  
+Source Code : git:/github.com/openshift/django-example.git  
+Cartridges  : Python 2.7  
+Scaling     : No scaling  
+Region      : No preference  
+[Create Application]
+</code></pre>
+
+<h2 id="ページの確認">ページの確認</h2>
+
+<p>admin へのリンクに進むと，もうデプロイできてる…！</p>
+
+<h2 id="公開鍵の登録">公開鍵の登録</h2>
+
+<p>mac の場合，</p>
+
+<pre><code class="language-bash">ssh-keygen
+vim /Users/username/.ssh/id_rsa.pub
+</code></pre>
+
+<p>OpenShift の&rdquo;Set an SSH key&rdquo; にコピペする。</p>
+
+<p>参考：
+<a href="http://d.hatena.ne.jp/uco_twinkle/20080409/1207703829">Mac OS X でSSH公開鍵を作成する - マークアッパーなアタシのための雑記</a></p>
+
+<h2 id="クライアントツールをインストールする">クライアントツールをインストールする</h2>
+
+<p>mac の場合（自分memo）</p>
+
+<ol>
+<li>Ruby はインストール済み</li>
+<li>git もインストール済み</li>
+<li><code>sudo gem install rhc</code></li>
+<li><code>rhc setup</code></li>
+</ol>
+
+<pre><code class="language-bash">Login to openshift.redhat.com: ***@***com # アカウント名
+Password: ***
+
+Generate a token now? (yes|no) yes
+
+Your public SSH key must be uploaded to the OpenShift server to access code.  Upload now? (yes|no) yes # さっきコピペしたんだけどな…
+
+Your client tools are now configured.
+</code></pre>
+
+<p>参考：
+<a href="https://developers.openshift.com/en/getting-started-client-tools.html">Installing Client Tools | OpenShift Developers</a></p>
+
+<h2 id="アプリの編集">アプリの編集</h2>
+
+<p>web インターフェイスの Eclipse plugin もあるけど，コマンドラインのほうがおすすめらしい。<br />
+公式ドキュメントにはコマンドラインでのアプリ作成方法が載ってますが，web 画面で作ったのでとばす。</p>
+
+<h3 id="ローカルにコピー">ローカルにコピー</h3>
+
+<p>コマンドラインからつくると，Git Repository が自動的にローカルに保存してくれるらしいですが，web の人は，アプリのページの &ldquo;Source Code&rdquo; の URL をコピーして，</p>
+
+<pre><code class="language-bash">git clone ssh:/.../ /Users/***/appname
+</code></pre>
+
+<p>などとします。</p>
+
+<p>こうやって，ローカルで編集するということですね。</p>
+
+<h3 id="git-を使い始める">git を使い始める</h3>
+
+<pre><code class="language-bash">cd /Users/***/appname
+git init
+</code></pre>
+
+<h3 id="変更後-再投稿する">（変更後）再投稿する</h3>
+
+<pre><code class="language-bash">git add .
+git commit -m &quot;some title&quot;
+git push
+</code></pre>
+
+<p>ローカルに落としたフォルダ内の README.md をみると，<code>git push</code> の後，django admin のユーザ名とパスワードが流れるから気をつけろと書いてある。<br />
+なので，よーく探したけど，見つからなかった…。</p>
+
+<p>調べてみるとエラーらしく，<a href="https://forums.openshift.com/how-to-login-on-the-admin-painel">How to login on the admin painel? | OpenShift Forums</a> に
+    Django has a standard command to solve this problem:<br />
+        1. Login using ssh
+        2. Goto the repo/wsgi/openshift directory
+        3. type: ./manage.py createsuperuser (and follow instructions)
+とあったので，</p>
+
+<pre><code class="language-bash">ssh 128d6...@appname-domainname.rhcroud.com
+cd app-root/repo/wsgi/openshift
+.manage.py createsuperuser
+</code></pre>
+
+<p>と，しました。</p>
+
+<p>これで，admin ページに入れました。</p>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+<li><a href="http://workpiles.com/2014/06/openshift-django-web/">OpenshiftでDjango | Workpiles</a></li>
+</ul>
+  </div>
+  <footer>
+    <div class="article-footer">
+      
+
+      
+      
+<div id="share-buttons">
+  <ul>
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+
+      
+      
+      <div id="pagenavigation-next-prev">
+        
+        <div id="pagenavigation-next">
+          <span class="pagenav-label">Previous</span>
+          <a href="https://yu-kosame.github.io/post/sub_domain/">サブドメインをつくる</a>
+        </div>
+        
+        
+        <div id="pagenavigation-prev">
+          <span class="pagenav-label">Next</span>
+          <a href="https://yu-kosame.github.io/post/echigoyuzawa/">秋の越後湯沢</a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </footer>
+</div>
+        </div>
+        <div class="sidebar">
+  
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>Author</span>
+    </div>
+    <div id="author">
+      <span>yu.kosame</span>
+      <div>
+        
+        <a href="https://twitter.com/spatial_news"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+        
+        
+        <a href="https://github.com/yu-kosame"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>Categories</span>
+    </div>
+    <div class="categories">
+      <ul>
+        
+        <li>
+          <a href="/categories/about"><span></span>about (1)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/field"><span></span>field (9)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/illust"><span></span>illust (2)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/linux"><span></span>linux (6)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/others"><span></span>others (3)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/postgresql"><span></span>postgresql (2)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/server"><span></span>server (1)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/study"><span></span>study (1)</a>
+        </li>
+        
+        <li>
+          <a href="/categories/windows"><span></span>windows (4)</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <span>RSS</span>
+    </div>
+    <div id="rss">
+      <a href="https://yu-kosame.github.io/index.xml" type="application/rss+xml" target="_blank">
+        <i class="fa fa-rss-square fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+      </div>
+      <footer>
+        <div id="site-footer-wrap">
+          <div id="site-footer">
+            <span>Powered by <a href="https://gohugo.io/">Hugo</a>.</span>
+            <span>
+              
+              Copyright (c) 2020, <a href="https://yu-kosame.github.io/">解析屋こさめ</a>
+              
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+

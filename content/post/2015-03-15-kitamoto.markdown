@@ -1,0 +1,41 @@
+---
+title: "北鴻巣 -> 北本"
+date: "2015-03-15"
+categories: field
+slug: kitamoto
+---
+
+![](/pict/kawasemi_20150315.png)
+
+<!--more-->
+
+<br>
+
+北本自然観察公園に行きました。
+
+シジュウカラが地面で落ち葉をひっくり返したり，カワセミが魚をプレゼントしていました（ whiteday？）。
+
+
+満開の梅の写真は，自分ではうまく撮れなかったけど…。
+
+<br>
+
+|ja. name|s. name|note
+|-----|-----|-----
+|ヒドリガモ|_Anas penelope_|
+|マガモ|_Anas platyrhynchos_|
+|カルガモ|_Anas zonorhyncha_|
+|コガモ|_Anas crecca_|
+|カイツブリ|_Tachybaptus ruficollis_|
+|アオサギ|_Ardea cinerea_|
+|カワセミ|_Alcedo atthis_|
+|アカゲラ|_Dendrocopos major_|声
+|ヤマガラ|_Poecile varius_|
+|シジュウカラ|_Parus minor_|
+|ウグイス|_Cettia diphone_|
+|エナガ|_Aegithalos caudatus_|
+|メジロ|_Zosterops japonicus_|
+|ツグミ|_Turdus naumanni_|
+|シメ|_Coccothraustes coccothraustes_|
+|アオジ|_Emberiza spodocephala_|
+|ガビチョウ|_Garrulax canorus_|
