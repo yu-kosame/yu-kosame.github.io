@@ -1,7 +1,0 @@
----
-title: "EVALUATE文"
-date: "2014-09-11"
-categories:
-slug: evaluate
----
-PHP やってて，EVALUATE みたいなの使いたいなって調べてみたら，COBOL 特有の名称だった(笑)。

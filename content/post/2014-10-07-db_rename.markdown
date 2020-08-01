@@ -1,9 +1,0 @@
----
-title: "データベースの名前変更"
-date: "2014-10-07"
-categories: postgresql
-slug: db_rename
----
-```sql
-ALTER DATABASE WIKIPE RENAME TO ANALYSIS;
-```
